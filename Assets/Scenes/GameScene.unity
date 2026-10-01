@@ -10318,7 +10318,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=#FFD700>\u2605 RANK I : LORD OF CINDER</color>  (600+ PTS)\n<color=#FFA500>\u2605 RANK II : FLAME GUARDIAN</color> (300+ PTS)\n<color=#00CED1>\u2605 RANK III : EMBER TENDER</color>  (100+ PTS)\n<color=#AAAAAA>\u2605 RANK IV : NOVICE KEEPER</color>   (0-99 PTS)\n\n<color=#88FF88>CURRENT STANDING: NOVICE KEEPER (0 PTS)</color>"
+  m_text: '<color=#FFD700>[I] LORD OF CINDER</color>  (600+ PTS)
+
+    <color=#FFA500>[II] FLAME GUARDIAN</color> (300+ PTS)
+
+    <color=#00CED1>[III] EMBER TENDER</color>  (100+ PTS)
+
+    <color=#AAAAAA>[IV] NOVICE KEEPER</color>   (0-99 PTS)
+
+
+    <color=#88FF88>CURRENT STANDING: NOVICE KEEPER (0 PTS)</color>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -108,10 +108,10 @@ public class GameManager : MonoBehaviour
             if (startLeaderboardText != null)
             {
                 startLeaderboardText.text = 
-                    "<color=#FFD700>★ RANK I : LORD OF CINDER</color>  (600+ PTS)\n" +
-                    "<color=#FFA500>★ RANK II : FLAME GUARDIAN</color> (300+ PTS)\n" +
-                    "<color=#00CED1>★ RANK III : EMBER TENDER</color>  (100+ PTS)\n" +
-                    "<color=#AAAAAA>★ RANK IV : NOVICE KEEPER</color>   (0-99 PTS)\n\n" +
+                    "<color=#FFD700>[I] LORD OF CINDER</color>  (600+ PTS)\n" +
+                    "<color=#FFA500>[II] FLAME GUARDIAN</color> (300+ PTS)\n" +
+                    "<color=#00CED1>[III] EMBER TENDER</color>  (100+ PTS)\n" +
+                    "<color=#AAAAAA>[IV] NOVICE KEEPER</color>   (0-99 PTS)\n\n" +
                     $"<color=#88FF88>CURRENT STANDING: {GetRankTitle(highScore)} ({highScore} PTS)</color>";
             }
 
@@ -264,7 +264,7 @@ public class GameManager : MonoBehaviour
         }
         if (gameOverText != null)
         {
-            string recordBadge = isNewRecord ? "\n<color=#FFD700>★ NEW HIGH SCORE! ★</color>" : "";
+            string recordBadge = isNewRecord ? "\n<color=#FFD700>[NEW HIGH SCORE!]</color>" : "";
             gameOverText.text = $"{reason.ToUpper()}{recordBadge}\n\n" +
                                 $"Time Survived:  {GetFormattedTime()}\n" +
                                 $"Final Score:    {score}\n" +
