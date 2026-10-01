@@ -5,10 +5,10 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 5f;
+    public float moveSpeed = 6f;
 
     [Header("Interaction Settings")]
-    public float interactRadius = 2.5f;
+    public float interactRadius = 3.2f;
     public LayerMask treeLayer;
     public GameObject thoughtBubble;
     public GameObject altarGlow;
@@ -20,64 +20,51 @@ public class PlayerController : MonoBehaviour
     public AudioSource pickupSource;
 
     private Rigidbody2D rb;
-    private Vector2 moveInput;
-    private Vector2 lastFacingDirection = Vector2.down;
+    private SpriteRenderer sr;
     private Animator animator;
+    private Vector2 moveInput = Vector2.zero;
+    private Vector2 lastFacingDirection = Vector2.down;
     public bool isCarryingLog = false;
     public bool isFuryActive = false;
-    private PlayerInput playerInput;
-    private bool registeredEvents = false;
     private float lastChopTime = 0f;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         if (thoughtBubble != null) thoughtBubble.SetActive(false);
     }
 
-    void Start()
+    void Update()
     {
-        playerInput = GetComponent<PlayerInput>();
-        if (playerInput != null && playerInput.actions != null)
-        {
-            var moveAction = playerInput.actions.FindAction("Move");
-            if (moveAction != null)
-            {
-                moveAction.performed += OnMove;
-                moveAction.canceled += OnMove;
-            }
-            var chopAction = playerInput.actions.FindAction("Chop");
-            if (chopAction != null)
-            {
-                chopAction.performed += OnChop;
-            }
-            registeredEvents = true;
-        }
-    }
+        // 1. Direct Input Polling (Works seamlessly in Legacy, New Input System, or Both)
+        float h = 0f;
+        float v = 0f;
 
-    void OnDestroy()
-    {
-        if (registeredEvents && playerInput != null && playerInput.actions != null)
+        // Try Legacy Input (WASD & Arrow Keys)
+        try
         {
-            var moveAction = playerInput.actions.FindAction("Move");
-            if (moveAction != null)
-            {
-                moveAction.performed -= OnMove;
-                moveAction.canceled -= OnMove;
-            }
-            var chopAction = playerInput.actions.FindAction("Chop");
-            if (chopAction != null)
-            {
-                chopAction.performed -= OnChop;
-            }
+            h = Input.GetAxisRaw("Horizontal");
+            v = Input.GetAxisRaw("Vertical");
         }
-    }
+        catch {}
 
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
-        if (moveInput.magnitude > 0.1f)
+        // Try New Input System (Keyboard)
+#if ENABLE_INPUT_SYSTEM
+        if (Mathf.Approximately(h, 0f) && Mathf.Approximately(v, 0f) && Keyboard.current != null)
+        {
+            if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) h -= 1f;
+            if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) h += 1f;
+            if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed) v -= 1f;
+            if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed) v += 1f;
+        }
+#endif
+
+        moveInput = new Vector2(h, v);
+
+        // Update animation and footsteps
+        if (moveInput.sqrMagnitude > 0.01f)
         {
             lastFacingDirection = moveInput.normalized;
             if (animator != null && animator.runtimeAnimatorController != null)
@@ -104,15 +91,64 @@ public class PlayerController : MonoBehaviour
                 footstepSource.Stop();
             }
         }
+
+        // 2. Spacebar Chop / Action Polling
+        bool spacePressed = false;
+        try { spacePressed = Input.GetKeyDown(KeyCode.Space); } catch {}
+
+#if ENABLE_INPUT_SYSTEM
+        if (!spacePressed && Keyboard.current != null)
+        {
+            spacePressed = Keyboard.current.spaceKey.wasPressedThisFrame;
+        }
+#endif
+
+        if (spacePressed)
+        {
+            ExecuteChopAction();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (rb != null)
+        {
+            Vector2 targetVel = moveInput.normalized * moveSpeed;
+            rb.linearVelocity = targetVel;
+            rb.MovePosition(rb.position + targetVel * Time.fixedDeltaTime);
+        }
+    }
+
+    // Input System Callback support
+    public void OnMove(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnChop()
+    {
+        ExecuteChopAction();
     }
 
     public void OnChop(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
+        if (context.performed)
+        {
+            ExecuteChopAction();
+        }
+    }
+
+    public void ExecuteChopAction()
+    {
         if (Time.unscaledTime - lastChopTime < 0.15f) return;
         lastChopTime = Time.unscaledTime;
 
-        // Trigger chop animation and sound in facing direction
+        // Play axe swing sound & animation
         if (axeChopSource != null && axeChopSource.clip != null)
         {
             axeChopSource.PlayOneShot(axeChopSource.clip);
@@ -124,7 +160,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("isChopping");
         }
 
-        // Case 1: If carrying a log, try to deliver to the Bonfire
+        // Case 1: If carrying a log, deliver to Bonfire
         if (isCarryingLog)
         {
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
@@ -147,32 +183,39 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
+            if (targetBonfire == null)
+            {
+                // Fallback check by direct distance to any active Bonfire
+                Bonfire anyBf = FindAnyObjectByType<Bonfire>();
+                if (anyBf != null && Vector2.Distance(transform.position, anyBf.transform.position) <= interactRadius + 1.5f)
+                {
+                    targetBonfire = anyBf;
+                }
+            }
+
             if (targetBonfire != null)
             {
                 targetBonfire.AddFuel(25f);
                 if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
                 isCarryingLog = false;
                 if (thoughtBubble != null) thoughtBubble.SetActive(false);
-                GameManager.Instance?.ShowNotification("Полено доставлено в костёр! (+50 очков)");
-                Debug.Log("Log delivered to bonfire!");
+                GameManager.Instance?.ShowNotification("Log sacrificed to the bonfire! (+50 pts)");
             }
             else
             {
-                GameManager.Instance?.ShowNotification("Рядом нет костра для доставки полена.");
-                Debug.Log("No bonfire nearby to deliver the log.");
+                GameManager.Instance?.ShowNotification("No bonfire nearby to offer the log.");
             }
             return;
         }
 
-        // Case 2: If NOT carrying a log, check for nearby Logs on the ground to pick up
+        // Case 2: If NOT carrying log, check for nearby Logs on ground to pick up
         {
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
             Collider2D nearestLog = null;
             float minDistSq = float.MaxValue;
             foreach (var hit in hits)
             {
-                if (hit == null) continue;
-                if (!hit.CompareTag("Log")) continue;
+                if (hit == null || !hit.CompareTag("Log")) continue;
                 float d = (hit.transform.position - transform.position).sqrMagnitude;
                 if (d < minDistSq)
                 {
@@ -190,8 +233,7 @@ public class PlayerController : MonoBehaviour
                     pickupSource.PlayOneShot(pickupSource.clip);
                 }
                 Destroy(nearestLog.gameObject);
-                GameManager.Instance?.ShowNotification("Полено подобрано! Отнеси его к костру.");
-                Debug.Log("Picked up a log!");
+                GameManager.Instance?.ShowNotification("Picked up a log! Deliver it to the bonfire.");
                 return;
             }
         }
@@ -224,11 +266,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("BuffZone"))
@@ -248,7 +285,7 @@ public class PlayerController : MonoBehaviour
 
     void ActivateForestWardBuff()
     {
-        GameManager.Instance?.ShowNotification("СВЯЩЕННЫЙ ОБЕРЕГ АКТИВИРОВАН! 5 деревьев уничтожено!");
+        GameManager.Instance?.ShowNotification("SACRED FOREST WARD ACTIVATED! 5 trees cleansed!");
         Tree[] allTrees = FindObjectsByType<Tree>(FindObjectsInactive.Exclude);
         int treesToDestroy = 5;
         for (int i = 0; i < allTrees.Length && i < treesToDestroy; i++)
@@ -262,10 +299,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ActivateFuryBuff()
     {
-        GameManager.Instance?.ShowNotification("ЯРОСТЬ ДРОВОСЕКА АКТИВИРОВАНА на 10 сек! (Рубка с 1 удара)");
+        GameManager.Instance?.ShowNotification("FURY OF THE WOODCUTTER ACTIVATED! (10s 1-hit chop)");
         isFuryActive = true;
         yield return new WaitForSeconds(10f);
         isFuryActive = false;
-        GameManager.Instance?.ShowNotification("Действие Ярости закончилось.");
+        GameManager.Instance?.ShowNotification("Fury buff expired.");
     }
 }

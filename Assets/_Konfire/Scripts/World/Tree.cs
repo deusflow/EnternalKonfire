@@ -57,7 +57,7 @@ public class Tree : MonoBehaviour
             {
                 GameManager.Instance.AddScore(10);
                 int left = ForestManager.Instance != null ? ForestManager.Instance.treeCount - 1 : 0;
-                GameManager.Instance.ShowNotification("Дерево срублено! Полено выпало на землю.");
+                GameManager.Instance.ShowNotification("Tree chopped! Log dropped on ground.");
             }
             Destroy(gameObject, 0.1f);
         }

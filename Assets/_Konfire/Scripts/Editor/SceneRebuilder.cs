@@ -217,6 +217,22 @@ public class SceneRebuilder
         bfAudio.clip = fireBurnClip;
 
         Bonfire bonfireComp = bonfireLogic.AddComponent<Bonfire>();
+
+        // Fire Glow Halo
+        GameObject fireBase = createdObjects.ContainsKey("Fire_Base") ? createdObjects["Fire_Base"] : bonfireLogic;
+        Sprite haloSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Konfire/Sprites/Visuals/GlowHalo.png");
+        if (haloSprite != null)
+        {
+            GameObject haloGO = new GameObject("Fire_Glow_Halo");
+            haloGO.transform.SetParent(fireBase.transform, false);
+            haloGO.transform.localPosition = Vector3.zero;
+            haloGO.transform.localScale = new Vector3(5f, 4.5f, 1f);
+            SpriteRenderer hsr = haloGO.AddComponent<SpriteRenderer>();
+            hsr.sprite = haloSprite;
+            hsr.color = new Color(1f, 0.55f, 0.1f, 0.45f);
+            hsr.sortingOrder = 3;
+            haloGO.AddComponent<FireGlowFlicker>();
+        }
         bonfireComp.logBurnSource = bfAudio;
 
         // NoSpawnZone
@@ -305,6 +321,7 @@ public class SceneRebuilder
             tb.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
             SpriteRenderer tbsr = tb.GetComponent<SpriteRenderer>();
             if (tbsr != null) tbsr.sortingOrder = 15;
+            tb.AddComponent<ThoughtBubbleBob>();
             tb.SetActive(false);
             pc.thoughtBubble = tb;
         }
@@ -378,7 +395,7 @@ public class SceneRebuilder
         GameObject camGO = createdObjects["Main Camera"];
         Camera cam = GetOrAdd<Camera>(camGO);
         cam.orthographic = true;
-        cam.orthographicSize = 9f;
+        cam.orthographicSize = 7.5f; cam.backgroundColor = new Color(0.196f, 0.365f, 0.208f, 1f); cam.clearFlags = CameraClearFlags.SolidColor;
         cam.transform.position = new Vector3(0f, 0f, -10f);
 
         // Follow player script on camera
@@ -400,38 +417,58 @@ public class SceneRebuilder
         GameObject canvasGO = new GameObject("Canvas");
         Canvas canvas = canvasGO.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvasGO.AddComponent<CanvasScaler>();
+        CanvasScaler scaler = canvasGO.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920f, 1080f);
+        scaler.matchWidthOrHeight = 0.5f;
         canvasGO.AddComponent<GraphicRaycaster>();
 
         GameObject esGO = new GameObject("EventSystem");
         esGO.AddComponent<UnityEngine.EventSystems.EventSystem>();
         esGO.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
 
-        // 1. Fuel Slider (Top-Left)
-        Sprite fuelFrame = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Konfire/Sprites/UI/FuelFrame.png");
+        // 0. Cinematic Forest Vignette (Atmospheric depth)
+        Sprite vigSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Konfire/Sprites/Visuals/Vignette.png");
+        if (vigSprite != null)
+        {
+            GameObject vigGO = new GameObject("Vignette_Overlay");
+            vigGO.transform.SetParent(canvasGO.transform, false);
+            RectTransform vigRt = vigGO.AddComponent<RectTransform>();
+            vigRt.anchorMin = Vector2.zero;
+            vigRt.anchorMax = Vector2.one;
+            vigRt.sizeDelta = Vector2.zero;
+            UnityEngine.UI.Image vigImg = vigGO.AddComponent<UnityEngine.UI.Image>();
+            vigImg.sprite = vigSprite;
+            vigImg.color = new Color(1f, 1f, 1f, 0.55f);
+            vigImg.raycastTarget = false;
+        }
+
+        // 1. Fuel Slider (Top-Left, Authentic Ornate Carved Frame)
+        Sprite fuelFrame = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Konfire/Sprites/OriginalSprites/ChatGPT Image Oct 29, 2025, 09_14_26 PM_3.png");
         GameObject sliderGO = new GameObject("Fuel_Slider");
         sliderGO.transform.SetParent(canvasGO.transform, false);
         RectTransform srt = sliderGO.AddComponent<RectTransform>();
         srt.anchorMin = new Vector2(0f, 1f);
         srt.anchorMax = new Vector2(0f, 1f);
         srt.pivot = new Vector2(0f, 1f);
-        srt.anchoredPosition = new Vector2(40f, -30f);
-        srt.sizeDelta = new Vector2(320f, 50f);
+        srt.anchoredPosition = new Vector2(35f, -25f);
+        srt.sizeDelta = new Vector2(360f, 90f);
 
         Slider slider = sliderGO.AddComponent<Slider>();
         slider.minValue = 0f;
         slider.maxValue = 100f;
         slider.value = 100f;
 
-        // Background
+        // Dark background slot behind fire
         GameObject bgGO = new GameObject("Background");
         bgGO.transform.SetParent(sliderGO.transform, false);
         RectTransform bgrt = bgGO.AddComponent<RectTransform>();
         bgrt.anchorMin = Vector2.zero;
         bgrt.anchorMax = Vector2.one;
-        bgrt.sizeDelta = Vector2.zero;
+        bgrt.offsetMin = new Vector2(40f, 22f);
+        bgrt.offsetMax = new Vector2(-40f, -22f);
         UnityEngine.UI.Image bgImg = bgGO.AddComponent<UnityEngine.UI.Image>();
-        bgImg.color = new Color(0.15f, 0.08f, 0.05f, 0.9f);
+        bgImg.color = new Color(0.12f, 0.05f, 0.02f, 0.95f);
 
         // Fill Area
         GameObject faGO = new GameObject("Fill Area");
@@ -439,8 +476,8 @@ public class SceneRebuilder
         RectTransform fart = faGO.AddComponent<RectTransform>();
         fart.anchorMin = Vector2.zero;
         fart.anchorMax = Vector2.one;
-        fart.sizeDelta = new Vector2(-16f, -12f);
-        fart.anchoredPosition = Vector2.zero;
+        fart.offsetMin = new Vector2(42f, 24f);
+        fart.offsetMax = new Vector2(-42f, -24f);
 
         GameObject fillGO = new GameObject("Fill");
         fillGO.transform.SetParent(faGO.transform, false);
@@ -449,12 +486,12 @@ public class SceneRebuilder
         fillrt.anchorMax = Vector2.one;
         fillrt.sizeDelta = Vector2.zero;
         UnityEngine.UI.Image fillImg = fillGO.AddComponent<UnityEngine.UI.Image>();
-        fillImg.color = new Color(0.95f, 0.35f, 0.05f, 1f);
+        fillImg.color = new Color(1f, 0.42f, 0.06f, 1f);
 
         slider.fillRect = fillrt;
         bonfire.fuelSlider = slider;
 
-        // Frame overlay
+        // Ornate Wood/Stone Frame on top
         if (fuelFrame != null)
         {
             GameObject frameGO = new GameObject("Frame");
@@ -462,29 +499,29 @@ public class SceneRebuilder
             RectTransform frt = frameGO.AddComponent<RectTransform>();
             frt.anchorMin = Vector2.zero;
             frt.anchorMax = Vector2.one;
-            frt.sizeDelta = new Vector2(10f, 10f);
+            frt.sizeDelta = Vector2.zero;
             UnityEngine.UI.Image frImg = frameGO.AddComponent<UnityEngine.UI.Image>();
             frImg.sprite = fuelFrame;
-            frImg.type = UnityEngine.UI.Image.Type.Sliced;
+            frImg.preserveAspect = false;
             frImg.raycastTarget = false;
         }
 
-        // 2. Score Plaque (Top-Right)
-        Sprite scoreSign = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Konfire/Sprites/UI/ScoreSign.png");
+        // 2. Score Banner (Top-Right, Authentic Carved Banner)
+        Sprite scoreBanner = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_Konfire/Sprites/OriginalSprites/ChatGPT Image Oct 29, 2025, 09_14_26 PM_0.png");
         GameObject scoreBgGO = new GameObject("Score_Background");
         scoreBgGO.transform.SetParent(canvasGO.transform, false);
         RectTransform sbrt = scoreBgGO.AddComponent<RectTransform>();
         sbrt.anchorMin = new Vector2(1f, 1f);
         sbrt.anchorMax = new Vector2(1f, 1f);
         sbrt.pivot = new Vector2(1f, 1f);
-        sbrt.anchoredPosition = new Vector2(-40f, -30f);
-        sbrt.sizeDelta = new Vector2(260f, 65f);
+        sbrt.anchoredPosition = new Vector2(-35f, -25f);
+        sbrt.sizeDelta = new Vector2(340f, 106f);
 
         UnityEngine.UI.Image sbImg = scoreBgGO.AddComponent<UnityEngine.UI.Image>();
-        if (scoreSign != null)
+        if (scoreBanner != null)
         {
-            sbImg.sprite = scoreSign;
-            sbImg.type = UnityEngine.UI.Image.Type.Sliced;
+            sbImg.sprite = scoreBanner;
+            sbImg.preserveAspect = false;
         }
         else
         {
@@ -496,13 +533,14 @@ public class SceneRebuilder
         RectTransform strt = scoreTextGO.AddComponent<RectTransform>();
         strt.anchorMin = Vector2.zero;
         strt.anchorMax = Vector2.one;
-        strt.sizeDelta = Vector2.zero;
+        strt.offsetMin = new Vector2(25f, 10f);
+        strt.offsetMax = new Vector2(-25f, -10f);
         TextMeshProUGUI tmpScore = scoreTextGO.AddComponent<TextMeshProUGUI>();
         tmpScore.text = "Score: 0";
         tmpScore.alignment = TextAlignmentOptions.Center;
-        tmpScore.fontSize = 28f;
+        tmpScore.fontSize = 32f;
         tmpScore.fontStyle = FontStyles.Bold;
-        tmpScore.color = new Color(0.95f, 0.95f, 0.85f, 1f);
+        tmpScore.color = new Color(1f, 0.94f, 0.82f, 1f);
         gm.scoreText = tmpScore;
 
         // 3. Notification Text (Bottom-Left)
@@ -512,14 +550,14 @@ public class SceneRebuilder
         notifrt.anchorMin = new Vector2(0f, 0f);
         notifrt.anchorMax = new Vector2(0f, 0f);
         notifrt.pivot = new Vector2(0f, 0f);
-        notifrt.anchoredPosition = new Vector2(30f, 25f);
-        notifrt.sizeDelta = new Vector2(650f, 40f);
+        notifrt.anchoredPosition = new Vector2(35f, 30f);
+        notifrt.sizeDelta = new Vector2(800f, 45f);
 
         TextMeshProUGUI notifTmp = notifGO.AddComponent<TextMeshProUGUI>();
         notifTmp.text = "";
-        notifTmp.fontSize = 18f;
+        notifTmp.fontSize = 22f;
         notifTmp.fontStyle = FontStyles.Bold;
-        notifTmp.color = new Color(1f, 0.85f, 0.3f, 1f);
+        notifTmp.color = new Color(1f, 0.92f, 0.4f, 1f);
         notifGO.SetActive(false);
         gm.notificationText = notifTmp;
 
@@ -540,47 +578,47 @@ public class SceneRebuilder
         }
         else
         {
-            goImg.color = new Color(0f, 0f, 0f, 0.85f);
+            goImg.color = new Color(0.04f, 0.06f, 0.05f, 0.92f);
         }
 
         // Title
         GameObject goTitleGO = new GameObject("GameOverTitle");
         goTitleGO.transform.SetParent(goScreen.transform, false);
         RectTransform titleRt = goTitleGO.AddComponent<RectTransform>();
-        titleRt.anchorMin = new Vector2(0.5f, 0.75f);
-        titleRt.anchorMax = new Vector2(0.5f, 0.75f);
-        titleRt.sizeDelta = new Vector2(700f, 100f);
+        titleRt.anchorMin = new Vector2(0.5f, 0.72f);
+        titleRt.anchorMax = new Vector2(0.5f, 0.72f);
+        titleRt.sizeDelta = new Vector2(800f, 90f);
         TextMeshProUGUI titleTmp = goTitleGO.AddComponent<TextMeshProUGUI>();
-        titleTmp.text = "THE FIRE WENT OUT";
+        titleTmp.text = "GAME OVER";
         titleTmp.alignment = TextAlignmentOptions.Center;
-        titleTmp.fontSize = 54f;
+        titleTmp.fontSize = 62f;
         titleTmp.fontStyle = FontStyles.Bold;
-        titleTmp.color = new Color(0.95f, 0.85f, 0.7f, 1f);
+        titleTmp.color = new Color(0.95f, 0.35f, 0.2f, 1f);
 
-        // Final score text
+        // Final score / reason text
         GameObject finalScoreGO = new GameObject("FinalScore_Text");
         finalScoreGO.transform.SetParent(goScreen.transform, false);
         RectTransform fsrt = finalScoreGO.AddComponent<RectTransform>();
-        fsrt.anchorMin = new Vector2(0.5f, 0.52f);
-        fsrt.anchorMax = new Vector2(0.5f, 0.52f);
-        fsrt.sizeDelta = new Vector2(500f, 80f);
+        fsrt.anchorMin = new Vector2(0.5f, 0.54f);
+        fsrt.anchorMax = new Vector2(0.5f, 0.54f);
+        fsrt.sizeDelta = new Vector2(700f, 90f);
         TextMeshProUGUI fsTmp = finalScoreGO.AddComponent<TextMeshProUGUI>();
-        fsTmp.text = "Final Score: 0";
+        fsTmp.text = "The Fire Went Out\nFinal Score: 0";
         fsTmp.alignment = TextAlignmentOptions.Center;
-        fsTmp.fontSize = 38f;
+        fsTmp.fontSize = 32f;
         fsTmp.fontStyle = FontStyles.Bold;
-        fsTmp.color = new Color(1f, 1f, 1f, 1f);
+        fsTmp.color = new Color(0.9f, 0.9f, 0.9f, 1f);
         gm.gameOverText = fsTmp;
 
         // Restart button
         GameObject restartBtnGO = new GameObject("RestartButton");
         restartBtnGO.transform.SetParent(goScreen.transform, false);
         RectTransform rbrt = restartBtnGO.AddComponent<RectTransform>();
-        rbrt.anchorMin = new Vector2(0.5f, 0.65f);
-        rbrt.anchorMax = new Vector2(0.5f, 0.65f);
-        rbrt.sizeDelta = new Vector2(240f, 50f);
+        rbrt.anchorMin = new Vector2(0.5f, 0.38f);
+        rbrt.anchorMax = new Vector2(0.5f, 0.38f);
+        rbrt.sizeDelta = new Vector2(260f, 55f);
         UnityEngine.UI.Image rbImg = restartBtnGO.AddComponent<UnityEngine.UI.Image>();
-        rbImg.color = new Color(0.15f, 0.25f, 0.45f, 1f);
+        rbImg.color = new Color(0.18f, 0.38f, 0.25f, 1f);
         Button rBtn = restartBtnGO.AddComponent<Button>();
         rBtn.onClick.AddListener(gm.RestartGame);
 
@@ -591,9 +629,9 @@ public class SceneRebuilder
         rtrt.anchorMax = Vector2.one;
         rtrt.sizeDelta = Vector2.zero;
         TextMeshProUGUI rtmp = rTxtGO.AddComponent<TextMeshProUGUI>();
-        rtmp.text = "RESTART GAME";
+        rtmp.text = "PLAY AGAIN";
         rtmp.alignment = TextAlignmentOptions.Center;
-        rtmp.fontSize = 22f;
+        rtmp.fontSize = 24f;
         rtmp.fontStyle = FontStyles.Bold;
         rtmp.color = Color.white;
 
@@ -601,11 +639,11 @@ public class SceneRebuilder
         GameObject menuBtnGO = new GameObject("MainMenuButton");
         menuBtnGO.transform.SetParent(goScreen.transform, false);
         RectTransform mbrt = menuBtnGO.AddComponent<RectTransform>();
-        mbrt.anchorMin = new Vector2(0.5f, 0.28f);
-        mbrt.anchorMax = new Vector2(0.5f, 0.28f);
-        mbrt.sizeDelta = new Vector2(240f, 50f);
+        mbrt.anchorMin = new Vector2(0.5f, 0.26f);
+        mbrt.anchorMax = new Vector2(0.5f, 0.26f);
+        mbrt.sizeDelta = new Vector2(260f, 55f);
         UnityEngine.UI.Image mbImg = menuBtnGO.AddComponent<UnityEngine.UI.Image>();
-        mbImg.color = new Color(0.15f, 0.25f, 0.45f, 1f);
+        mbImg.color = new Color(0.35f, 0.2f, 0.15f, 1f);
         Button mBtn = menuBtnGO.AddComponent<Button>();
         mBtn.onClick.AddListener(gm.LoadMainMenu);
 
@@ -618,11 +656,12 @@ public class SceneRebuilder
         TextMeshProUGUI mtmp = mTxtGO.AddComponent<TextMeshProUGUI>();
         mtmp.text = "MAIN MENU";
         mtmp.alignment = TextAlignmentOptions.Center;
-        mtmp.fontSize = 22f;
+        mtmp.fontSize = 24f;
         mtmp.fontStyle = FontStyles.Bold;
         mtmp.color = Color.white;
 
         goScreen.SetActive(false);
         gm.gameOverScreen = goScreen;
     }
+
 }

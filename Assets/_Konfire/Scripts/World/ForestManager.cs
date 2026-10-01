@@ -108,7 +108,7 @@ public class ForestManager : MonoBehaviour
         if (currentSpawnDelay > minSpawnDelay)
         {
             currentSpawnDelay -= delayReduction;
-            GameManager.Instance?.ShowNotification("ЛЕС СТАНОВИТСЯ ЗЛЕЕ! Новая задержка спавна: " + currentSpawnDelay.ToString("F1"));
+            GameManager.Instance?.ShowNotification("THE FOREST THICKENS! Trees spawning faster!");
             Debug.Log("Forest is getting harder! New spawn delay: " + currentSpawnDelay);
         }
     }
@@ -116,7 +116,7 @@ public class ForestManager : MonoBehaviour
     public void RegisterTree()
     {
         treeCount++;
-        GameManager.Instance?.ShowNotification("Дерево зарегистрировано! Всего деревьев: " + treeCount + " / " + actualCatLimit);
+        GameManager.Instance?.ShowNotification("Forest trees: " + treeCount + " / " + actualCatLimit);
         Debug.Log("Tree added! Total: " + treeCount + " / " + actualCatLimit);
         CheckForCatSpawn();
     }
@@ -140,7 +140,7 @@ public class ForestManager : MonoBehaviour
         if (isCatSpawned) return;
         if (catPrefab == null) return;
         isCatSpawned = true;
-        GameManager.Instance?.ShowNotification("ДУХ ЛЕСА ПРОБУДИЛСЯ! СПАСАЙСЯ!");
+        GameManager.Instance?.ShowNotification("THE FOREST GHOST HAS AWAKENED! RUN!");
         Debug.Log("The cat has spawned! Good luck :)");
         if (catSpawnSource != null)
         {

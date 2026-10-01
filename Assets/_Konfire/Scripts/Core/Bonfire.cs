@@ -68,7 +68,7 @@ public class Bonfire : MonoBehaviour
                 if (altarGlow != null)
                 {
                     altarGlow.SetActive(true);
-                    GameManager.Instance?.ShowNotification("АЛТАРЬ ЗАРЯЖЕН! Розовая аура: Ярость лесоруба готова!");
+                    GameManager.Instance?.ShowNotification("ALTAR CHARGED! Pink aura: Woodcutter Fury ready!");
                 }
             }
         }
@@ -82,7 +82,7 @@ public class Bonfire : MonoBehaviour
                 if (blueAltarGlow != null)
                 {
                     blueAltarGlow.SetActive(true);
-                    GameManager.Instance?.ShowNotification("АЛТАРЬ ЗАРЯЖЕН! Синяя аура: Священный оберег леса готов!");
+                    GameManager.Instance?.ShowNotification("ALTAR CHARGED! Blue aura: Sacred Forest Ward ready!");
                 }
             }
         }
