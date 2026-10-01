@@ -1,48 +1,57 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using System.Collections;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 6f;
+    public float baseMoveSpeed = 3.2f;
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
+    private Animator animator;
+    private Vector2 lastFacingDirection = Vector2.down;
 
-    [Header("Interaction Settings")]
-    public float interactRadius = 3.2f;
-    public LayerMask treeLayer;
+    [Header("Interaction & Inventory")]
+    public bool isCarryingLog = false;
+    public float interactRadius = 1.6f;
     public GameObject thoughtBubble;
-    public GameObject altarGlow;
-    public GameObject blueAltarGlow;
 
-    [Header("Audio Setup")]
+    [Header("Combat & Weapon")]
+    public bool hasWeapon = false;
+    public int weaponCharges = 0;
+    public GameObject weaponVisual;
+
+    [Header("Audio")]
     public AudioSource footstepSource;
     public AudioSource axeChopSource;
     public AudioSource pickupSource;
 
-    private Rigidbody2D rb;
-    private SpriteRenderer sr;
-    private Animator animator;
-    private Vector2 moveInput = Vector2.zero;
-    private Vector2 lastFacingDirection = Vector2.down;
-    public bool isCarryingLog = false;
-    public bool isFuryActive = false;
-    private float lastChopTime = 0f;
+    [Header("Legacy / Altar References")]
+    public GameObject altarGlow;
+    public GameObject blueAltarGlow;
+
+    private float lastActionTime = 0f;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
         if (thoughtBubble != null) thoughtBubble.SetActive(false);
+        if (weaponVisual != null) weaponVisual.SetActive(false);
     }
 
     void Update()
     {
-        // 1. Direct Input Polling (Works seamlessly in Legacy, New Input System, or Both)
+        // 1. Movement Input Polling (Dual-stack support)
         float h = 0f;
         float v = 0f;
 
-        // Try Legacy Input (WASD & Arrow Keys)
         try
         {
             h = Input.GetAxisRaw("Horizontal");
@@ -50,21 +59,25 @@ public class PlayerController : MonoBehaviour
         }
         catch {}
 
-        // Try New Input System (Keyboard)
 #if ENABLE_INPUT_SYSTEM
-        if (Mathf.Approximately(h, 0f) && Mathf.Approximately(v, 0f) && Keyboard.current != null)
+        if (h == 0 && v == 0 && Keyboard.current != null)
         {
-            if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) h -= 1f;
-            if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) h += 1f;
-            if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed) v -= 1f;
-            if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed) v += 1f;
+            if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) h = -1f;
+            else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) h = 1f;
+
+            if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed) v = -1f;
+            else if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed) v = 1f;
         }
 #endif
 
-        moveInput = new Vector2(h, v);
+        if (moveInput == Vector2.zero || (h != 0 || v != 0))
+        {
+            moveInput = new Vector2(h, v);
+        }
 
-        // Update animation and footsteps
-        if (moveInput.sqrMagnitude > 0.01f)
+        // Animation update
+        bool isMoving = moveInput.sqrMagnitude > 0.01f;
+        if (isMoving)
         {
             lastFacingDirection = moveInput.normalized;
             if (animator != null && animator.runtimeAnimatorController != null)
@@ -92,7 +105,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // 2. Spacebar Chop / Action Polling
+        // 2. Spacebar Action Polling
         bool spacePressed = false;
         try { spacePressed = Input.GetKeyDown(KeyCode.Space); } catch {}
 
@@ -105,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
         if (spacePressed)
         {
-            ExecuteChopAction();
+            ExecuteAction();
         }
     }
 
@@ -113,42 +126,68 @@ public class PlayerController : MonoBehaviour
     {
         if (rb != null)
         {
-            Vector2 targetVel = moveInput.normalized * moveSpeed;
+            float currentSpeed = baseMoveSpeed;
+
+            // Speed reduction if carrying heavy log
+            if (isCarryingLog) currentSpeed *= 0.85f;
+
+            // Speed Buff
+            if (BuffManager.Instance != null && BuffManager.Instance.activeBuff == BuffType.SpeedBoost)
+            {
+                currentSpeed *= 1.6f;
+            }
+
+            // Low Fuel Panic Sprint (Comeback mechanic!)
+            Bonfire bf = FindAnyObjectByType<Bonfire>();
+            if (bf != null && bf.currentFuel < 20f)
+            {
+                currentSpeed *= 1.15f;
+            }
+
+            Vector2 targetVel = moveInput.normalized * currentSpeed;
             rb.linearVelocity = targetVel;
             rb.MovePosition(rb.position + targetVel * Time.fixedDeltaTime);
         }
     }
 
-    // Input System Callback support
-    public void OnMove(InputValue value)
+    // Input System Callbacks
+    public void OnMove(InputValue value) { moveInput = value.Get<Vector2>(); }
+    public void OnChop() { ExecuteAction(); }
+
+    public void AcquireWeapon(int charges)
     {
-        moveInput = value.Get<Vector2>();
+        hasWeapon = true;
+        weaponCharges += charges;
+        if (weaponVisual != null) weaponVisual.SetActive(true);
+        if (pickupSource != null) pickupSource.Play();
+        GameManager.Instance?.ShowNotification($"HOLY SPIRIT AXE! ({weaponCharges} strikes against Ghost Cats)");
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void UseWeaponStrike(GhostCatAI cat)
     {
-        moveInput = context.ReadValue<Vector2>();
-    }
+        if (!hasWeapon) return;
 
-    public void OnChop()
-    {
-        ExecuteChopAction();
-    }
-
-    public void OnChop(InputAction.CallbackContext context)
-    {
-        if (context.performed)
+        weaponCharges--;
+        if (weaponCharges <= 0)
         {
-            ExecuteChopAction();
+            hasWeapon = false;
+            if (weaponVisual != null) weaponVisual.SetActive(false);
+            GameManager.Instance?.ShowNotification("Holy weapon shattered!");
         }
+        else
+        {
+            GameManager.Instance?.ShowNotification($"Cat banished! ({weaponCharges} weapon strikes left)");
+        }
+
+        cat.Banish();
     }
 
-    public void ExecuteChopAction()
+    public void ExecuteAction()
     {
-        if (Time.unscaledTime - lastChopTime < 0.15f) return;
-        lastChopTime = Time.unscaledTime;
+        if (Time.unscaledTime - lastActionTime < 0.22f) return;
+        lastActionTime = Time.unscaledTime;
 
-        // Play axe swing sound & animation
+        // Play swing sound & animation
         if (axeChopSource != null && axeChopSource.clip != null)
         {
             axeChopSource.PlayOneShot(axeChopSource.clip);
@@ -160,56 +199,45 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("isChopping");
         }
 
-        // Case 1: If carrying a log, deliver to Bonfire
-        if (isCarryingLog)
+        // Priority 1: If has weapon, strike nearby Ghost Cat!
+        if (hasWeapon)
         {
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
-            Bonfire targetBonfire = null;
-            float minDistSq = float.MaxValue;
-
-            foreach (var hit in hits)
+            Collider2D[] catHits = Physics2D.OverlapCircleAll(transform.position, interactRadius + 0.6f);
+            foreach (var hit in catHits)
             {
                 if (hit == null) continue;
-                var b = hit.GetComponent<Bonfire>() ?? hit.GetComponentInParent<Bonfire>();
-                if (b == null && hit.CompareTag("Bonfire")) b = FindAnyObjectByType<Bonfire>();
-                if (b != null)
+                var cat = hit.GetComponent<GhostCatAI>() ?? hit.GetComponentInParent<GhostCatAI>();
+                if (cat != null)
                 {
-                    float d = (hit.transform.position - transform.position).sqrMagnitude;
-                    if (d < minDistSq)
-                    {
-                        minDistSq = d;
-                        targetBonfire = b;
-                    }
+                    UseWeaponStrike(cat);
+                    return;
                 }
             }
+        }
 
-            if (targetBonfire == null)
-            {
-                // Fallback check by direct distance to any active Bonfire
-                Bonfire anyBf = FindAnyObjectByType<Bonfire>();
-                if (anyBf != null && Vector2.Distance(transform.position, anyBf.transform.position) <= interactRadius + 1.5f)
-                {
-                    targetBonfire = anyBf;
-                }
-            }
-
-            if (targetBonfire != null)
+        // Priority 2: If carrying a log, deliver to Bonfire
+        if (isCarryingLog)
+        {
+            Bonfire targetBonfire = FindAnyObjectByType<Bonfire>();
+            if (targetBonfire != null && Vector2.Distance(transform.position, targetBonfire.transform.position) <= interactRadius + 2.2f)
             {
                 targetBonfire.AddFuel(25f);
-                CameraShake.Instance?.Shake(0.15f, 0.12f);
+                CameraShake.Instance?.Shake(0.04f, 0.08f);
                 if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
                 isCarryingLog = false;
                 if (thoughtBubble != null) thoughtBubble.SetActive(false);
-                GameManager.Instance?.ShowNotification("Log sacrificed to the bonfire! (+50 pts)");
+                AltarManager.Instance?.OnLogDelivered();
+                GameManager.Instance?.ShowNotification("Log offered to the sacred fire! (+50 pts)");
+                return;
             }
             else
             {
-                GameManager.Instance?.ShowNotification("No bonfire nearby to offer the log.");
+                GameManager.Instance?.ShowNotification("Get closer to the bonfire to offer the log.");
+                return;
             }
-            return;
         }
 
-        // Case 2: If NOT carrying log, check for nearby Logs on ground to pick up
+        // Priority 3: Pick up nearby Log on ground
         {
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
             Collider2D nearestLog = null;
@@ -234,12 +262,12 @@ public class PlayerController : MonoBehaviour
                     pickupSource.PlayOneShot(pickupSource.clip);
                 }
                 Destroy(nearestLog.gameObject);
-                GameManager.Instance?.ShowNotification("Picked up a log! Deliver it to the bonfire.");
+                GameManager.Instance?.ShowNotification("Picked up timber! Deliver it to the bonfire.");
                 return;
             }
         }
 
-        // Case 3: If no log, chop nearest tree
+        // Priority 4: Chop nearest Tree
         {
             Collider2D[] treeHits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
             Tree nearestTree = null;
@@ -261,49 +289,10 @@ public class PlayerController : MonoBehaviour
 
             if (nearestTree != null)
             {
-                int damage = isFuryActive ? 999 : 1;
+                bool isFury = BuffManager.Instance != null && BuffManager.Instance.activeBuff == BuffType.WoodcutterFury;
+                int damage = isFury ? 999 : 1;
                 nearestTree.TakeDamage(damage);
             }
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("BuffZone"))
-        {
-            if (altarGlow != null && altarGlow.activeSelf)
-            {
-                StartCoroutine(ActivateFuryBuff());
-                altarGlow.SetActive(false);
-            }
-            else if (blueAltarGlow != null && blueAltarGlow.activeSelf)
-            {
-                ActivateForestWardBuff();
-                blueAltarGlow.SetActive(false);
-            }
-        }
-    }
-
-    void ActivateForestWardBuff()
-    {
-        GameManager.Instance?.ShowNotification("SACRED FOREST WARD ACTIVATED! 5 trees cleansed!");
-        Tree[] allTrees = FindObjectsByType<Tree>(FindObjectsInactive.Exclude);
-        int treesToDestroy = 5;
-        for (int i = 0; i < allTrees.Length && i < treesToDestroy; i++)
-        {
-            if (allTrees[i] != null)
-            {
-                Destroy(allTrees[i].gameObject);
-            }
-        }
-    }
-
-    IEnumerator ActivateFuryBuff()
-    {
-        GameManager.Instance?.ShowNotification("FURY OF THE WOODCUTTER ACTIVATED! (10s 1-hit chop)");
-        isFuryActive = true;
-        yield return new WaitForSeconds(10f);
-        isFuryActive = false;
-        GameManager.Instance?.ShowNotification("Fury buff expired.");
     }
 }

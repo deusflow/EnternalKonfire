@@ -5,25 +5,19 @@ public class Bonfire : MonoBehaviour
 {
     public float maxFuel = 100f;
     public float currentFuel = 100f;
-    public float burnRate = 2f;
+    public float baseBurnRate = 2f;
 
     public Slider fuelSlider;
+    public AudioSource logBurnSource;
+
+    [Header("Legacy / Altar Glow References")]
     public GameObject altarGlow;
     public GameObject blueAltarGlow;
-
-    [Header("Buff Tracking (GDD)")]
-    public int mediumFuelDeliveries = 0;
-    public int highFuelDeliveries = 0;
-
-    [Header("Audio Setup")]
-    public AudioSource logBurnSource;
 
     void Start()
     {
         if (currentFuel <= 0) currentFuel = maxFuel;
         if (fuelSlider != null) fuelSlider.maxValue = maxFuel;
-        if (altarGlow != null) altarGlow.SetActive(false);
-        if (blueAltarGlow != null) blueAltarGlow.SetActive(false);
         UpdateFuelSlider();
     }
 
@@ -31,7 +25,9 @@ public class Bonfire : MonoBehaviour
     {
         if (currentFuel > 0.001f)
         {
-            currentFuel -= burnRate * Time.deltaTime;
+            // Comeback mechanic: when fuel is critical (< 20%), embers smolder slower
+            float effectiveBurnRate = currentFuel < 20f ? (baseBurnRate * 0.5f) : baseBurnRate;
+            currentFuel -= effectiveBurnRate * Time.deltaTime;
             UpdateFuelSlider();
         }
         else
@@ -40,7 +36,7 @@ public class Bonfire : MonoBehaviour
             UpdateFuelSlider();
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.EndGame("The bonfire went out");
+                GameManager.Instance.EndGame("The sacred bonfire went out");
             }
             this.enabled = false;
         }
@@ -56,36 +52,6 @@ public class Bonfire : MonoBehaviour
         currentFuel += amount;
         if (currentFuel > maxFuel) currentFuel = maxFuel;
         UpdateFuelSlider();
-
-        // GDD Buff Trigger Logic
-        // Rosk Bøf (Fury): Deliver 2 logs while fuel is medium (40 - 80)
-        if (currentFuel >= 40f && currentFuel <= 80f)
-        {
-            mediumFuelDeliveries++;
-            if (mediumFuelDeliveries >= 2)
-            {
-                mediumFuelDeliveries = 0;
-                if (altarGlow != null)
-                {
-                    altarGlow.SetActive(true);
-                    GameManager.Instance?.ShowNotification("ALTAR CHARGED! Pink aura: Woodcutter Fury ready!");
-                }
-            }
-        }
-        // Blå Bøf (Forest Ward): Deliver 3 logs while fuel is roaring (80+)
-        else if (currentFuel > 80f)
-        {
-            highFuelDeliveries++;
-            if (highFuelDeliveries >= 3)
-            {
-                highFuelDeliveries = 0;
-                if (blueAltarGlow != null)
-                {
-                    blueAltarGlow.SetActive(true);
-                    GameManager.Instance?.ShowNotification("ALTAR CHARGED! Blue aura: Sacred Forest Ward ready!");
-                }
-            }
-        }
     }
 
     void UpdateFuelSlider()
@@ -102,6 +68,7 @@ public class Bonfire : MonoBehaviour
         {
             AddFuel(25f);
             if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
+            AltarManager.Instance?.OnLogDelivered();
             Destroy(collision.gameObject);
         }
     }
