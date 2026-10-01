@@ -36,6 +36,8 @@ public class GhostCatAI : MonoBehaviour
         var playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null) playerTransform = playerObj.transform;
 
+        TutorialManager.Instance?.TriggerGhostCatTutorial();
+
         StartCoroutine(SpawnGraceRoutine());
     }
 
@@ -111,6 +113,7 @@ public class GhostCatAI : MonoBehaviour
         if (GameManager.Instance != null)
         {
             GameManager.Instance.AddScore(100);
+            GameManager.Instance.RecordCatBanished();
             GameManager.Instance.ShowNotification("GHOST CAT BANISHED! (+100 pts)");
         }
         Destroy(gameObject);

@@ -391,17 +391,25 @@ public class SceneRebuilder
         gm.buttonClickSource = sfxAudio;
         gm.gameOverClip = catClip;
 
-        // F. Camera
+        // F. Camera Rig Architecture
         GameObject camGO = createdObjects["Main Camera"];
         Camera cam = GetOrAdd<Camera>(camGO);
         cam.orthographic = true;
         cam.orthographicSize = 7.5f; cam.backgroundColor = new Color(0.196f, 0.365f, 0.208f, 1f); cam.clearFlags = CameraClearFlags.SolidColor;
-        cam.transform.position = new Vector3(0f, 0f, -10f);
 
-        // Follow player script on camera
-        var camFollow = camGO.AddComponent<Cainos.PixelArtTopDown_Basic.CameraFollow>();
+        GameObject cameraRig = new GameObject("CameraRig");
+        cameraRig.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0f);
+        var camFollow = cameraRig.AddComponent<Cainos.PixelArtTopDown_Basic.CameraFollow>();
         camFollow.target = player.transform;
-        camFollow.lerpSpeed = 4f;
+        camFollow.lerpSpeed = 4.5f;
+
+        camGO.transform.SetParent(cameraRig.transform, false);
+        camGO.transform.localPosition = new Vector3(0f, 0f, -10f);
+        var shake = camGO.GetComponent<CameraShake>();
+        if (shake == null) shake = camGO.AddComponent<CameraShake>();
+        var camData = camGO.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>();
+        if (camData == null) camData = camGO.AddComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>();
+        camData.renderPostProcessing = true;
 
         // G. Create UI Canvas
         CreateGameUI(bonfireComp, gm);

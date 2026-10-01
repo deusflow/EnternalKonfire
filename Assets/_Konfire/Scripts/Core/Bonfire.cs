@@ -51,6 +51,7 @@ public class Bonfire : MonoBehaviour
 
         currentFuel += amount;
         if (currentFuel > maxFuel) currentFuel = maxFuel;
+        GameManager.Instance?.RecordLogBurned();
         UpdateFuelSlider();
     }
 

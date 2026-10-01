@@ -77,6 +77,7 @@ public class Tree : MonoBehaviour
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.AddScore(15);
+                GameManager.Instance.RecordTreeChopped();
                 GameManager.Instance.ShowNotification("Tree felled! Timber collected.");
             }
 

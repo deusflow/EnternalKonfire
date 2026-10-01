@@ -146,7 +146,6 @@ public class PlayerController : MonoBehaviour
 
             Vector2 targetVel = moveInput.normalized * currentSpeed;
             rb.linearVelocity = targetVel;
-            rb.MovePosition(rb.position + targetVel * Time.fixedDeltaTime);
         }
     }
 
@@ -161,6 +160,7 @@ public class PlayerController : MonoBehaviour
         if (weaponVisual != null) weaponVisual.SetActive(true);
         if (pickupSource != null) pickupSource.Play();
         GameManager.Instance?.ShowNotification($"HOLY SPIRIT AXE! ({weaponCharges} strikes against Ghost Cats)");
+        TutorialManager.Instance?.TriggerWeaponTutorial();
     }
 
     public void UseWeaponStrike(GhostCatAI cat)

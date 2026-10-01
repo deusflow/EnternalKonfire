@@ -61,5 +61,7 @@ public class AltarManager : MonoBehaviour
         GameObject spawned = AltarBuffPickup.SpawnBuff(pos, chosen, 12f);
         if (isLeft) leftBuff = spawned;
         else rightBuff = spawned;
+
+        TutorialManager.Instance?.TriggerAltarBuffTutorial();
     }
 }
