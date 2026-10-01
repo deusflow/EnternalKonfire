@@ -31,13 +31,21 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
     public Button mainMenuButton;
 
+    [Header("Start Menu Overlay")]
+    public GameObject startMenuScreen;
+    public Button startGameButton;
+    public TextMeshProUGUI startHighScoreText;
+    public TextMeshProUGUI startRankText;
+    public TextMeshProUGUI startLeaderboardText;
+    private bool isGameStarted = false;
+
     [Header("Audio Setup")]
     public AudioSource gameMusicSource;
     public AudioSource buttonClickSource;
     public AudioClip gameOverClip;
 
     [Header("Settings")]
-    public float loadDelay = 0.5f;
+    public float loadDelay = 0.1f;
 
     private Coroutine notificationCoroutine;
     private const string PREF_HIGHSCORE = "Konfire_HighScore";
@@ -46,28 +54,109 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null) { Instance = this; } else { Destroy(gameObject); }
         if (gameOverScreen != null) { gameOverScreen.SetActive(false); }
-        Time.timeScale = 1f;
 
         highScore = PlayerPrefs.GetInt(PREF_HIGHSCORE, 0);
-
-        if (gameMusicSource != null)
-        {
-            gameMusicSource.loop = true;
-            gameMusicSource.Play();
-        }
 
         UpdateScoreText();
         UpdateTimerText();
         BindGameOverButtons();
+        SetupStartMenu();
     }
 
     void Update()
     {
+        if (!isGameStarted)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            {
+                StartGameFromMenu();
+            }
+            return;
+        }
+
         if (!isGameOver)
         {
             survivalTimer += Time.deltaTime;
             UpdateTimerText();
         }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            {
+                RestartGame();
+            }
+        }
+    }
+
+    public void SetupStartMenu()
+    {
+        if (startMenuScreen != null)
+        {
+            startMenuScreen.SetActive(true);
+            startMenuScreen.transform.SetAsLastSibling();
+            isGameStarted = false;
+            Time.timeScale = 0f;
+
+            if (startHighScoreText != null)
+            {
+                startHighScoreText.text = $"BEST RECORD: {highScore} PTS";
+            }
+            if (startRankText != null)
+            {
+                startRankText.text = $"TITLE: {GetRankTitle(highScore)}";
+            }
+            if (startLeaderboardText != null)
+            {
+                startLeaderboardText.text = 
+                    "<color=#FFD700>★ RANK I : LORD OF CINDER</color>  (600+ PTS)\n" +
+                    "<color=#FFA500>★ RANK II : FLAME GUARDIAN</color> (300+ PTS)\n" +
+                    "<color=#00CED1>★ RANK III : EMBER TENDER</color>  (100+ PTS)\n" +
+                    "<color=#AAAAAA>★ RANK IV : NOVICE KEEPER</color>   (0-99 PTS)\n\n" +
+                    $"<color=#88FF88>CURRENT STANDING: {GetRankTitle(highScore)} ({highScore} PTS)</color>";
+            }
+
+            if (startGameButton != null)
+            {
+                startGameButton.onClick.RemoveAllListeners();
+                startGameButton.onClick.AddListener(StartGameFromMenu);
+            }
+        }
+        else
+        {
+            isGameStarted = true;
+            Time.timeScale = 1f;
+            if (gameMusicSource != null && !gameMusicSource.isPlaying)
+            {
+                gameMusicSource.loop = true;
+                gameMusicSource.Play();
+            }
+        }
+    }
+
+    public void StartGameFromMenu()
+    {
+        PlayButtonClickSound();
+        isGameStarted = true;
+        Time.timeScale = 1f;
+
+        if (startMenuScreen != null)
+        {
+            startMenuScreen.SetActive(false);
+        }
+
+        if (gameMusicSource != null && !gameMusicSource.isPlaying)
+        {
+            gameMusicSource.loop = true;
+            gameMusicSource.Play();
+        }
+    }
+
+    public string GetRankTitle(int scoreValue)
+    {
+        if (scoreValue >= 600) return "<color=#FFD700>LORD OF CINDER</color>";
+        if (scoreValue >= 300) return "<color=#FFA500>FLAME GUARDIAN</color>";
+        if (scoreValue >= 100) return "<color=#00CED1>EMBER TENDER</color>";
+        return "<color=#CCCCCC>NOVICE KEEPER</color>";
     }
 
     public void AddScore(int amount)
@@ -170,6 +259,7 @@ public class GameManager : MonoBehaviour
         if (gameOverScreen != null) 
         { 
             gameOverScreen.SetActive(true); 
+            gameOverScreen.transform.SetAsLastSibling();
             BindGameOverButtons();
         }
         if (gameOverText != null)
@@ -215,27 +305,15 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        StartCoroutine(RestartWithSound());
+        Time.timeScale = 1f;
+        PlayButtonClickSound();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void LoadMainMenu()
     {
-        StartCoroutine(LoadMenuWithSound());
-    }
-
-    private IEnumerator RestartWithSound()
-    {
-        PlayButtonClickSound();
-        yield return new WaitForSecondsRealtime(loadDelay);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    private IEnumerator LoadMenuWithSound()
-    {
         PlayButtonClickSound();
-        yield return new WaitForSecondsRealtime(loadDelay);
-        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
