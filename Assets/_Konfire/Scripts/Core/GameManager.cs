@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
@@ -25,6 +26,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI notificationText;
+
+    [Header("Game Over Buttons")]
+    public Button restartButton;
+    public Button mainMenuButton;
 
     [Header("Audio Setup")]
     public AudioSource gameMusicSource;
@@ -53,6 +58,7 @@ public class GameManager : MonoBehaviour
 
         UpdateScoreText();
         UpdateTimerText();
+        BindGameOverButtons();
     }
 
     void Update()
@@ -161,7 +167,11 @@ public class GameManager : MonoBehaviour
             gameMusicSource.PlayOneShot(gameOverClip);
         }
 
-        if (gameOverScreen != null) { gameOverScreen.SetActive(true); }
+        if (gameOverScreen != null) 
+        { 
+            gameOverScreen.SetActive(true); 
+            BindGameOverButtons();
+        }
         if (gameOverText != null)
         {
             string recordBadge = isNewRecord ? "\n<color=#FFD700>★ NEW HIGH SCORE! ★</color>" : "";
@@ -170,6 +180,36 @@ public class GameManager : MonoBehaviour
                                 $"Final Score:    {score}\n" +
                                 $"High Score:     {highScore}\n\n" +
                                 $"<size=20>Trees Felled: {treesChopped}  |  Cats Banished: {catsBanished}  |  Logs Burned: {logsBurned}</size>";
+        }
+    }
+
+    public void BindGameOverButtons()
+    {
+        if (gameOverScreen != null)
+        {
+            if (restartButton == null)
+            {
+                var r = gameOverScreen.transform.Find("RestartButton");
+                if (r != null) restartButton = r.GetComponent<Button>();
+            }
+            if (mainMenuButton == null)
+            {
+                var m = gameOverScreen.transform.Find("MainMenuButton");
+                if (m != null) mainMenuButton = m.GetComponent<Button>();
+            }
+        }
+
+        if (restartButton != null)
+        {
+            restartButton.onClick.RemoveAllListeners();
+            restartButton.onClick.AddListener(RestartGame);
+            restartButton.interactable = true;
+        }
+        if (mainMenuButton != null)
+        {
+            mainMenuButton.onClick.RemoveAllListeners();
+            mainMenuButton.onClick.AddListener(LoadMainMenu);
+            mainMenuButton.interactable = true;
         }
     }
 
