@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: dac24bc04624a4c8e83b540a5f9fabb2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5928740436512279445
+    second: Splash Screen Unity Logo_0
+  - first:
+      213: -5123038278472244865
+    second: Splash Screen Unity Logo_1
+  - first:
+      213: 7769756973082931426
+    second: Splash Screen Unity Logo_2
+  - first:
+      213: 984356029962039719
+    second: Splash Screen Unity Logo_3
+  - first:
+      213: -3436285914738530115
+    second: Splash Screen Unity Logo_4
+  - first:
+      213: -334578868223289372
+    second: Splash Screen Unity Logo_5
+  - first:
+      213: -5726787714092605292
+    second: Splash Screen Unity Logo_6
+  - first:
+      213: -466385383386258755
+    second: Splash Screen Unity Logo_7
+  - first:
+      213: -2017287242694804964
+    second: Splash Screen Unity Logo_8
+  - first:
+      213: 8868322478151781209
+    second: Splash Screen Unity Logo_9
+  - first:
+      213: 8250582951513808403
+    second: Splash Screen Unity Logo_10
+  - first:
+      213: -2429504188432426765
+    second: Splash Screen Unity Logo_11
+  - first:
+      213: 4237823783792060525
+    second: Splash Screen Unity Logo_12
+  - first:
+      213: -1141541360781029669
+    second: Splash Screen Unity Logo_13
+  - first:
+      213: -8116259787631880119
+    second: Splash Screen Unity Logo_14
+  - first:
+      213: 2713424418001584686
+    second: Splash Screen Unity Logo_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 546
+        width: 103
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b0fc3e30e174250800000000000000
+      internalID: 5928740436512279445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 545
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71eee824df47e8b0800000000000000
+      internalID: -5123038278472244865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 546
+        width: 82
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0f8b31dc8b3db60800000000000000
+      internalID: 7769756973082931426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_3
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 546
+        width: 66
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1b66a089229ad00800000000000000
+      internalID: 984356029962039719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_4
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 270
+        width: 429
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8e451ba2cdf40d0800000000000000
+      internalID: -3436285914738530115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_5
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 404
+        width: 196
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7d232ca465b5bf0800000000000000
+      internalID: -334578868223289372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_6
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 596
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49060757aec5680b0800000000000000
+      internalID: -5726787714092605292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_7
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 406
+        width: 107
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2e3def6f01789f0800000000000000
+      internalID: -466385383386258755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_8
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 408
+        width: 163
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1abf39d0f72104e0800000000000000
+      internalID: -2017287242694804964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_9
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 408
+        width: 56
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95b49d7be4c921b70800000000000000
+      internalID: 8868322478151781209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_10
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 353
+        width: 175
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31edfde1b75ff7270800000000000000
+      internalID: 8250582951513808403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_11
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 531
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8592c00daa84ed0800000000000000
+      internalID: -2429504188432426765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_12
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 408
+        width: 130
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68a0a54746cfca30800000000000000
+      internalID: 4237823783792060525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_13
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 408
+        width: 22
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde0b363e2e6820f0800000000000000
+      internalID: -1141541360781029669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_14
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 408
+        width: 79
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9481a6599b04d5f80800000000000000
+      internalID: -8116259787631880119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splash Screen Unity Logo_15
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 408
+        width: 82
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e220bdfb12508a520800000000000000
+      internalID: 2713424418001584686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Splash Screen Unity Logo_0: 5928740436512279445
+      Splash Screen Unity Logo_1: -5123038278472244865
+      Splash Screen Unity Logo_10: 8250582951513808403
+      Splash Screen Unity Logo_11: -2429504188432426765
+      Splash Screen Unity Logo_12: 4237823783792060525
+      Splash Screen Unity Logo_13: -1141541360781029669
+      Splash Screen Unity Logo_14: -8116259787631880119
+      Splash Screen Unity Logo_15: 2713424418001584686
+      Splash Screen Unity Logo_2: 7769756973082931426
+      Splash Screen Unity Logo_3: 984356029962039719
+      Splash Screen Unity Logo_4: -3436285914738530115
+      Splash Screen Unity Logo_5: -334578868223289372
+      Splash Screen Unity Logo_6: -5726787714092605292
+      Splash Screen Unity Logo_7: -466385383386258755
+      Splash Screen Unity Logo_8: -2017287242694804964
+      Splash Screen Unity Logo_9: 8868322478151781209
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

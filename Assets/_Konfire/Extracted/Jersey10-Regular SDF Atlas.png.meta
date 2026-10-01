@@ -1,0 +1,2602 @@
+fileFormatVersion: 2
+guid: 7f8f33c2a96b74e82a8717fc1b9736ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6244562471504417094
+    second: Jersey10-Regular SDF Atlas_0
+  - first:
+      213: -845193290905910543
+    second: Jersey10-Regular SDF Atlas_1
+  - first:
+      213: -7502170919831246932
+    second: Jersey10-Regular SDF Atlas_2
+  - first:
+      213: -3797431699118893523
+    second: Jersey10-Regular SDF Atlas_3
+  - first:
+      213: 7575001394209757873
+    second: Jersey10-Regular SDF Atlas_4
+  - first:
+      213: 8454987059842850132
+    second: Jersey10-Regular SDF Atlas_5
+  - first:
+      213: -8263548741571103568
+    second: Jersey10-Regular SDF Atlas_6
+  - first:
+      213: 1586099223049541843
+    second: Jersey10-Regular SDF Atlas_7
+  - first:
+      213: -7179369221364865701
+    second: Jersey10-Regular SDF Atlas_8
+  - first:
+      213: 4119879348006492793
+    second: Jersey10-Regular SDF Atlas_9
+  - first:
+      213: 6696434153660230854
+    second: Jersey10-Regular SDF Atlas_10
+  - first:
+      213: 3725842385042944044
+    second: Jersey10-Regular SDF Atlas_11
+  - first:
+      213: -691809891002473183
+    second: Jersey10-Regular SDF Atlas_12
+  - first:
+      213: 5176901199067602333
+    second: Jersey10-Regular SDF Atlas_13
+  - first:
+      213: 1233608175523685216
+    second: Jersey10-Regular SDF Atlas_14
+  - first:
+      213: 6745434911364482326
+    second: Jersey10-Regular SDF Atlas_15
+  - first:
+      213: -4210032765056956400
+    second: Jersey10-Regular SDF Atlas_16
+  - first:
+      213: 8773256998123986026
+    second: Jersey10-Regular SDF Atlas_17
+  - first:
+      213: -3929038804684942849
+    second: Jersey10-Regular SDF Atlas_18
+  - first:
+      213: 64526785064861351
+    second: Jersey10-Regular SDF Atlas_19
+  - first:
+      213: 2794774849986289387
+    second: Jersey10-Regular SDF Atlas_20
+  - first:
+      213: -2780292243959558813
+    second: Jersey10-Regular SDF Atlas_21
+  - first:
+      213: 8728534597770636368
+    second: Jersey10-Regular SDF Atlas_22
+  - first:
+      213: 6161817660352139751
+    second: Jersey10-Regular SDF Atlas_23
+  - first:
+      213: -91734935516840783
+    second: Jersey10-Regular SDF Atlas_24
+  - first:
+      213: 8120163229924137781
+    second: Jersey10-Regular SDF Atlas_25
+  - first:
+      213: -4065156378086071016
+    second: Jersey10-Regular SDF Atlas_26
+  - first:
+      213: 1955362783554402623
+    second: Jersey10-Regular SDF Atlas_27
+  - first:
+      213: -32004668823724170
+    second: Jersey10-Regular SDF Atlas_28
+  - first:
+      213: 609626713532282854
+    second: Jersey10-Regular SDF Atlas_29
+  - first:
+      213: -4397408077708420050
+    second: Jersey10-Regular SDF Atlas_30
+  - first:
+      213: 2434497855618742290
+    second: Jersey10-Regular SDF Atlas_31
+  - first:
+      213: 4787470506164673071
+    second: Jersey10-Regular SDF Atlas_32
+  - first:
+      213: 5388723523704738803
+    second: Jersey10-Regular SDF Atlas_33
+  - first:
+      213: -7263495141961972625
+    second: Jersey10-Regular SDF Atlas_34
+  - first:
+      213: -8320238048005611628
+    second: Jersey10-Regular SDF Atlas_35
+  - first:
+      213: -799415596057452021
+    second: Jersey10-Regular SDF Atlas_36
+  - first:
+      213: 8464507634128745954
+    second: Jersey10-Regular SDF Atlas_37
+  - first:
+      213: -1135338118585385519
+    second: Jersey10-Regular SDF Atlas_38
+  - first:
+      213: -7295168428776627991
+    second: Jersey10-Regular SDF Atlas_39
+  - first:
+      213: 423662909232552450
+    second: Jersey10-Regular SDF Atlas_40
+  - first:
+      213: 9177849671868016583
+    second: Jersey10-Regular SDF Atlas_41
+  - first:
+      213: 7756229156406661283
+    second: Jersey10-Regular SDF Atlas_42
+  - first:
+      213: 1176953886558219022
+    second: Jersey10-Regular SDF Atlas_43
+  - first:
+      213: 8354878803085847481
+    second: Jersey10-Regular SDF Atlas_44
+  - first:
+      213: 6338520070952216784
+    second: Jersey10-Regular SDF Atlas_45
+  - first:
+      213: -2541174774833255242
+    second: Jersey10-Regular SDF Atlas_46
+  - first:
+      213: -5497551185270196548
+    second: Jersey10-Regular SDF Atlas_47
+  - first:
+      213: -8873532752519453239
+    second: Jersey10-Regular SDF Atlas_48
+  - first:
+      213: 6388043908393479398
+    second: Jersey10-Regular SDF Atlas_49
+  - first:
+      213: 8034158655934697349
+    second: Jersey10-Regular SDF Atlas_50
+  - first:
+      213: 2736553701431663317
+    second: Jersey10-Regular SDF Atlas_51
+  - first:
+      213: 4925061467512689472
+    second: Jersey10-Regular SDF Atlas_52
+  - first:
+      213: 5728711945959363910
+    second: Jersey10-Regular SDF Atlas_53
+  - first:
+      213: 2517445019222902146
+    second: Jersey10-Regular SDF Atlas_54
+  - first:
+      213: 3092290808580991481
+    second: Jersey10-Regular SDF Atlas_55
+  - first:
+      213: 756711902028747065
+    second: Jersey10-Regular SDF Atlas_56
+  - first:
+      213: 7935328498142734902
+    second: Jersey10-Regular SDF Atlas_57
+  - first:
+      213: -6232832147133074198
+    second: Jersey10-Regular SDF Atlas_58
+  - first:
+      213: 1350201794193661785
+    second: Jersey10-Regular SDF Atlas_59
+  - first:
+      213: 211488662146977276
+    second: Jersey10-Regular SDF Atlas_60
+  - first:
+      213: 3239675924878843923
+    second: Jersey10-Regular SDF Atlas_61
+  - first:
+      213: -2949093422973108118
+    second: Jersey10-Regular SDF Atlas_62
+  - first:
+      213: -6560211637001221415
+    second: Jersey10-Regular SDF Atlas_63
+  - first:
+      213: 3545857971861720404
+    second: Jersey10-Regular SDF Atlas_64
+  - first:
+      213: 1666439613438699317
+    second: Jersey10-Regular SDF Atlas_65
+  - first:
+      213: -7791578547396578412
+    second: Jersey10-Regular SDF Atlas_66
+  - first:
+      213: 2681384755302032221
+    second: Jersey10-Regular SDF Atlas_67
+  - first:
+      213: 8570398437032964400
+    second: Jersey10-Regular SDF Atlas_68
+  - first:
+      213: 1377490626058771401
+    second: Jersey10-Regular SDF Atlas_69
+  - first:
+      213: -648998166111500577
+    second: Jersey10-Regular SDF Atlas_70
+  - first:
+      213: 5821229272949838740
+    second: Jersey10-Regular SDF Atlas_71
+  - first:
+      213: 5727548177444407011
+    second: Jersey10-Regular SDF Atlas_72
+  - first:
+      213: -6655285264750466147
+    second: Jersey10-Regular SDF Atlas_73
+  - first:
+      213: -8480967405939030941
+    second: Jersey10-Regular SDF Atlas_74
+  - first:
+      213: -7710306394412291990
+    second: Jersey10-Regular SDF Atlas_75
+  - first:
+      213: 772207028939264733
+    second: Jersey10-Regular SDF Atlas_76
+  - first:
+      213: 3630866398686738231
+    second: Jersey10-Regular SDF Atlas_77
+  - first:
+      213: -367147112725741245
+    second: Jersey10-Regular SDF Atlas_78
+  - first:
+      213: 6738638246633990715
+    second: Jersey10-Regular SDF Atlas_79
+  - first:
+      213: 1070503069262668233
+    second: Jersey10-Regular SDF Atlas_80
+  - first:
+      213: -4055858565493458842
+    second: Jersey10-Regular SDF Atlas_81
+  - first:
+      213: -1063144160386084169
+    second: Jersey10-Regular SDF Atlas_82
+  - first:
+      213: -3404229316643341234
+    second: Jersey10-Regular SDF Atlas_83
+  - first:
+      213: 6791693094757551835
+    second: Jersey10-Regular SDF Atlas_84
+  - first:
+      213: 7413261557021422562
+    second: Jersey10-Regular SDF Atlas_85
+  - first:
+      213: -1451903619600158990
+    second: Jersey10-Regular SDF Atlas_86
+  - first:
+      213: -6462102377324910347
+    second: Jersey10-Regular SDF Atlas_87
+  - first:
+      213: -4729611924072046284
+    second: Jersey10-Regular SDF Atlas_88
+  - first:
+      213: -6655306579349303862
+    second: Jersey10-Regular SDF Atlas_89
+  - first:
+      213: -7833971568945650243
+    second: Jersey10-Regular SDF Atlas_90
+  - first:
+      213: 107083072197026672
+    second: Jersey10-Regular SDF Atlas_91
+  - first:
+      213: 5197715217477245888
+    second: Jersey10-Regular SDF Atlas_92
+  - first:
+      213: -1707814432894108999
+    second: Jersey10-Regular SDF Atlas_93
+  - first:
+      213: 6487290593024233586
+    second: Jersey10-Regular SDF Atlas_94
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 421
+        width: 36
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe6e3c648bd659a0800000000000000
+      internalID: -6244562471504417094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 473
+        width: 49
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f282011e254544f0800000000000000
+      internalID: -845193290905910543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 412
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7613feb4fe2e790800000000000000
+      internalID: -7502170919831246932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 473
+        width: 49
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26d5334dffcc4bc0800000000000000
+      internalID: -3797431699118893523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 412
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba16fa42afcf1960800000000000000
+      internalID: 7575001394209757873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 473
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d157a3fe5265570800000000000000
+      internalID: 8454987059842850132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 460
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b43782a33af15d80800000000000000
+      internalID: -8263548741571103568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 456
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8146007d4f20610800000000000000
+      internalID: 1586099223049541843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 453
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55ac292bb1cd5c90800000000000000
+      internalID: -7179369221364865701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 453
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a156f5070cc2930800000000000000
+      internalID: 4119879348006492793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 448
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc26be22638eec50800000000000000
+      internalID: 6696434153660230854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 448
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c203499a8e9d4b330800000000000000
+      internalID: 3725842385042944044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 448
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12522bac1923666f0800000000000000
+      internalID: -691809891002473183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 351
+        width: 36
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9dd7bf463c08d740800000000000000
+      internalID: 5176901199067602333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 399
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0636b168918ae1110800000000000000
+      internalID: 1233608175523685216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 395
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615066320599c9d50800000000000000
+      internalID: 6745434911364482326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 392
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01846028185f295c0800000000000000
+      internalID: -4210032765056956400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 392
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cd360d1ced0c970800000000000000
+      internalID: 8773256998123986026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 387
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff1570a26004979c0800000000000000
+      internalID: -3929038804684942849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 387
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aef946e4ce35e000800000000000000
+      internalID: 64526785064861351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 387
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beed0a03be809c620800000000000000
+      internalID: 2794774849986289387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 420
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d440b4fea6a69d0800000000000000
+      internalID: -2780292243959558813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 389
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c63dd88fbf12970800000000000000
+      internalID: 8728534597770636368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 351
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e19400f38c238550800000000000000
+      internalID: 6161817660352139751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 338
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc760bef871abef0800000000000000
+      internalID: -91734935516840783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 335
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b11d56f6d90b070800000000000000
+      internalID: 8120163229924137781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 334
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81524cfefc9a597c0800000000000000
+      internalID: -4065156378086071016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 331
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3977c87718d22b10800000000000000
+      internalID: 1955362783554402623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 331
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f9b9b5ceb4e8ff0800000000000000
+      internalID: -32004668823724170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 334
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e73ea91444d57800800000000000000
+      internalID: 609626713532282854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 334
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c91cbd6a449f2c0800000000000000
+      internalID: -4397408077708420050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 334
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 218fa92b6e219c120800000000000000
+      internalID: 2434497855618742290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 358
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ada9c6f03807240800000000000000
+      internalID: 4787470506164673071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 318
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3563f7e7798ca40800000000000000
+      internalID: 5388723523704738803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 281
+        width: 36
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f64c49be6a1e23b90800000000000000
+      internalID: -7263495141961972625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 281
+        width: 36
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f9fede393988c80800000000000000
+      internalID: -8320238048005611628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 277
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02a61930c7e7e4f0800000000000000
+      internalID: -799415596057452021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 308
+        width: 45
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e573daa8d8f77570800000000000000
+      internalID: 8464507634128745954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 247
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ddf1c51ff77e30f0800000000000000
+      internalID: -1135338118585385519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 308
+        width: 54
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0ef1a27fa52ca90800000000000000
+      internalID: -7295168428776627991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 305
+        width: 49
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a9059db2721e500800000000000000
+      internalID: 423662909232552450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 305
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7e0a576a54e5f70800000000000000
+      internalID: 9177849671868016583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 281
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a09520d259a3ab60800000000000000
+      internalID: 7756229156406661283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 265
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b6155f251655010800000000000000
+      internalID: 1176953886558219022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 211
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb6f5f510e72f370800000000000000
+      internalID: 8354878803085847481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 211
+        width: 27
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d86aceeb62f6f750800000000000000
+      internalID: 6338520070952216784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 211
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc61e9810febbcd0800000000000000
+      internalID: -2541174774833255242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 186
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb631730356c4b3b0800000000000000
+      internalID: -5497551185270196548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 245
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c5a84fb9f0ead480800000000000000
+      internalID: -8873532752519453239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 184
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec2461e614e6a850800000000000000
+      internalID: 6388043908393479398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 244
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f0e141bb01f7f60800000000000000
+      internalID: 8034158655934697349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 183
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da5d92b7113af520800000000000000
+      internalID: 2736553701431663317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 244
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043de048f45595440800000000000000
+      internalID: 4925061467512689472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 183
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645d17fa929708f40800000000000000
+      internalID: 5728711945959363910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_54
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 244
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2858b5038e2cfe220800000000000000
+      internalID: 2517445019222902146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_55
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 183
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9eca35b160aea20800000000000000
+      internalID: 3092290808580991481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_56
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 244
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931dbb53771608a00800000000000000
+      internalID: 756711902028747065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_57
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 183
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ae4d3d933ff1e60800000000000000
+      internalID: 7935328498142734902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_58
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 228
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae47f756f288089a0800000000000000
+      internalID: -6232832147133074198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_59
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 212
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f120ec061ecb210800000000000000
+      internalID: 1350201794193661785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 141
+        width: 40
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd0b4551db5fe200800000000000000
+      internalID: 211488662146977276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_61
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 141
+        width: 32
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310e9c1d614a5fc20800000000000000
+      internalID: 3239675924878843923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_62
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 132
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a604f322827b217d0800000000000000
+      internalID: -2949093422973108118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_63
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 124
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da882d064275f4a0800000000000000
+      internalID: -6560211637001221415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_64
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 123
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d0ec4e90b653130800000000000000
+      internalID: 3545857971861720404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_65
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 122
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53727aecff1602710800000000000000
+      internalID: 1666439613438699317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_66
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 122
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4937fdab790ced390800000000000000
+      internalID: -7791578547396578412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_67
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 122
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53ece57a31363520800000000000000
+      internalID: 2681384755302032221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_68
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 122
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031b9e678fb20f670800000000000000
+      internalID: 8570398437032964400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_69
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 175
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cbd9a71d64dd1310800000000000000
+      internalID: 1377490626058771401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_70
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 122
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd64b014b9b4ef6f0800000000000000
+      internalID: -648998166111500577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_71
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 159
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493d74a7e2929c050800000000000000
+      internalID: 5821229272949838740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e68286b8b65c7f40800000000000000
+      internalID: 5727548177444407011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_73
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 66
+        width: 36
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b28ab105da3a3a0800000000000000
+      internalID: -6655285264750466147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_74
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 62
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3648651141d8d4a80800000000000000
+      internalID: -8480967405939030941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_75
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 62
+        width: 67
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68e1ab6f2d7ff490800000000000000
+      internalID: -7710306394412291990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_76
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 61
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd21cf4933e67ba00800000000000000
+      internalID: 772207028939264733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_77
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 61
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737ff90a0cd636230800000000000000
+      internalID: 3630866398686738231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_78
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 61
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3410cad65a1a7eaf0800000000000000
+      internalID: -367147112725741245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_79
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 61
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3aea7058c3748d50800000000000000
+      internalID: 6738638246633990715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_80
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 61
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c1ed56aed03bde00800000000000000
+      internalID: 1070503069262668233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_81
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 61
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6687980af12b6b7c0800000000000000
+      internalID: -4055858565493458842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_82
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 106
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b21827d404fe31f0800000000000000
+      internalID: -1063144160386084169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_83
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 53
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4cb08f097fb1c0d0800000000000000
+      internalID: -3404229316643341234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 49
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde4f70c2e0f04e50800000000000000
+      internalID: 6791693094757551835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_85
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 36
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e33255eb1231e660800000000000000
+      internalID: 7413261557021422562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_86
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fee0a9b95dc9dbe0800000000000000
+      internalID: -1451903619600158990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_87
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 27
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f8675120200256a0800000000000000
+      internalID: -6462102377324910347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_88
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 0
+        width: 67
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431eb3c730b0d5eb0800000000000000
+      internalID: -4729611924072046284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_89
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd809a6de993a3a0800000000000000
+      internalID: -6655306579349303862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_90
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 0
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db52c7c3d54284390800000000000000
+      internalID: -7833971568945650243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_91
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073e2cf9c7f6c7100800000000000000
+      internalID: 107083072197026672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_92
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 0
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb9f5d937ef12840800000000000000
+      internalID: 5197715217477245888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_93
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 0
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9babf0952df9c48e0800000000000000
+      internalID: -1707814432894108999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jersey10-Regular SDF Atlas_94
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 0
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27051f75c6c770a50800000000000000
+      internalID: 6487290593024233586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jersey10-Regular SDF Atlas_0: -6244562471504417094
+      Jersey10-Regular SDF Atlas_1: -845193290905910543
+      Jersey10-Regular SDF Atlas_10: 6696434153660230854
+      Jersey10-Regular SDF Atlas_11: 3725842385042944044
+      Jersey10-Regular SDF Atlas_12: -691809891002473183
+      Jersey10-Regular SDF Atlas_13: 5176901199067602333
+      Jersey10-Regular SDF Atlas_14: 1233608175523685216
+      Jersey10-Regular SDF Atlas_15: 6745434911364482326
+      Jersey10-Regular SDF Atlas_16: -4210032765056956400
+      Jersey10-Regular SDF Atlas_17: 8773256998123986026
+      Jersey10-Regular SDF Atlas_18: -3929038804684942849
+      Jersey10-Regular SDF Atlas_19: 64526785064861351
+      Jersey10-Regular SDF Atlas_2: -7502170919831246932
+      Jersey10-Regular SDF Atlas_20: 2794774849986289387
+      Jersey10-Regular SDF Atlas_21: -2780292243959558813
+      Jersey10-Regular SDF Atlas_22: 8728534597770636368
+      Jersey10-Regular SDF Atlas_23: 6161817660352139751
+      Jersey10-Regular SDF Atlas_24: -91734935516840783
+      Jersey10-Regular SDF Atlas_25: 8120163229924137781
+      Jersey10-Regular SDF Atlas_26: -4065156378086071016
+      Jersey10-Regular SDF Atlas_27: 1955362783554402623
+      Jersey10-Regular SDF Atlas_28: -32004668823724170
+      Jersey10-Regular SDF Atlas_29: 609626713532282854
+      Jersey10-Regular SDF Atlas_3: -3797431699118893523
+      Jersey10-Regular SDF Atlas_30: -4397408077708420050
+      Jersey10-Regular SDF Atlas_31: 2434497855618742290
+      Jersey10-Regular SDF Atlas_32: 4787470506164673071
+      Jersey10-Regular SDF Atlas_33: 5388723523704738803
+      Jersey10-Regular SDF Atlas_34: -7263495141961972625
+      Jersey10-Regular SDF Atlas_35: -8320238048005611628
+      Jersey10-Regular SDF Atlas_36: -799415596057452021
+      Jersey10-Regular SDF Atlas_37: 8464507634128745954
+      Jersey10-Regular SDF Atlas_38: -1135338118585385519
+      Jersey10-Regular SDF Atlas_39: -7295168428776627991
+      Jersey10-Regular SDF Atlas_4: 7575001394209757873
+      Jersey10-Regular SDF Atlas_40: 423662909232552450
+      Jersey10-Regular SDF Atlas_41: 9177849671868016583
+      Jersey10-Regular SDF Atlas_42: 7756229156406661283
+      Jersey10-Regular SDF Atlas_43: 1176953886558219022
+      Jersey10-Regular SDF Atlas_44: 8354878803085847481
+      Jersey10-Regular SDF Atlas_45: 6338520070952216784
+      Jersey10-Regular SDF Atlas_46: -2541174774833255242
+      Jersey10-Regular SDF Atlas_47: -5497551185270196548
+      Jersey10-Regular SDF Atlas_48: -8873532752519453239
+      Jersey10-Regular SDF Atlas_49: 6388043908393479398
+      Jersey10-Regular SDF Atlas_5: 8454987059842850132
+      Jersey10-Regular SDF Atlas_50: 8034158655934697349
+      Jersey10-Regular SDF Atlas_51: 2736553701431663317
+      Jersey10-Regular SDF Atlas_52: 4925061467512689472
+      Jersey10-Regular SDF Atlas_53: 5728711945959363910
+      Jersey10-Regular SDF Atlas_54: 2517445019222902146
+      Jersey10-Regular SDF Atlas_55: 3092290808580991481
+      Jersey10-Regular SDF Atlas_56: 756711902028747065
+      Jersey10-Regular SDF Atlas_57: 7935328498142734902
+      Jersey10-Regular SDF Atlas_58: -6232832147133074198
+      Jersey10-Regular SDF Atlas_59: 1350201794193661785
+      Jersey10-Regular SDF Atlas_6: -8263548741571103568
+      Jersey10-Regular SDF Atlas_60: 211488662146977276
+      Jersey10-Regular SDF Atlas_61: 3239675924878843923
+      Jersey10-Regular SDF Atlas_62: -2949093422973108118
+      Jersey10-Regular SDF Atlas_63: -6560211637001221415
+      Jersey10-Regular SDF Atlas_64: 3545857971861720404
+      Jersey10-Regular SDF Atlas_65: 1666439613438699317
+      Jersey10-Regular SDF Atlas_66: -7791578547396578412
+      Jersey10-Regular SDF Atlas_67: 2681384755302032221
+      Jersey10-Regular SDF Atlas_68: 8570398437032964400
+      Jersey10-Regular SDF Atlas_69: 1377490626058771401
+      Jersey10-Regular SDF Atlas_7: 1586099223049541843
+      Jersey10-Regular SDF Atlas_70: -648998166111500577
+      Jersey10-Regular SDF Atlas_71: 5821229272949838740
+      Jersey10-Regular SDF Atlas_72: 5727548177444407011
+      Jersey10-Regular SDF Atlas_73: -6655285264750466147
+      Jersey10-Regular SDF Atlas_74: -8480967405939030941
+      Jersey10-Regular SDF Atlas_75: -7710306394412291990
+      Jersey10-Regular SDF Atlas_76: 772207028939264733
+      Jersey10-Regular SDF Atlas_77: 3630866398686738231
+      Jersey10-Regular SDF Atlas_78: -367147112725741245
+      Jersey10-Regular SDF Atlas_79: 6738638246633990715
+      Jersey10-Regular SDF Atlas_8: -7179369221364865701
+      Jersey10-Regular SDF Atlas_80: 1070503069262668233
+      Jersey10-Regular SDF Atlas_81: -4055858565493458842
+      Jersey10-Regular SDF Atlas_82: -1063144160386084169
+      Jersey10-Regular SDF Atlas_83: -3404229316643341234
+      Jersey10-Regular SDF Atlas_84: 6791693094757551835
+      Jersey10-Regular SDF Atlas_85: 7413261557021422562
+      Jersey10-Regular SDF Atlas_86: -1451903619600158990
+      Jersey10-Regular SDF Atlas_87: -6462102377324910347
+      Jersey10-Regular SDF Atlas_88: -4729611924072046284
+      Jersey10-Regular SDF Atlas_89: -6655306579349303862
+      Jersey10-Regular SDF Atlas_9: 4119879348006492793
+      Jersey10-Regular SDF Atlas_90: -7833971568945650243
+      Jersey10-Regular SDF Atlas_91: 107083072197026672
+      Jersey10-Regular SDF Atlas_92: 5197715217477245888
+      Jersey10-Regular SDF Atlas_93: -1707814432894108999
+      Jersey10-Regular SDF Atlas_94: 6487290593024233586
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
