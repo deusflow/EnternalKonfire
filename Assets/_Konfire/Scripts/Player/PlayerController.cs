@@ -219,20 +219,14 @@ public class PlayerController : MonoBehaviour
         if (isCarryingLog)
         {
             Bonfire targetBonfire = FindAnyObjectByType<Bonfire>();
-            if (targetBonfire != null && Vector2.Distance(transform.position, targetBonfire.transform.position) <= interactRadius + 2.2f)
+            if (targetBonfire != null && Vector2.Distance(transform.position, targetBonfire.transform.position) <= interactRadius + 3.2f)
             {
-                targetBonfire.AddFuel(25f);
-                CameraShake.Instance?.Shake(0.04f, 0.08f);
-                if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
-                isCarryingLog = false;
-                if (thoughtBubble != null) thoughtBubble.SetActive(false);
-                AltarManager.Instance?.OnLogDelivered();
-                GameManager.Instance?.ShowNotification("Log offered to the sacred fire! (+50 pts)");
+                DeliverLogToBonfire(targetBonfire);
                 return;
             }
             else
             {
-                GameManager.Instance?.ShowNotification("Get closer to the bonfire to offer the log.");
+                GameManager.Instance?.ShowNotification("Climb the stairs to the bonfire to offer the log.");
                 return;
             }
         }
@@ -292,6 +286,30 @@ public class PlayerController : MonoBehaviour
                 bool isFury = BuffManager.Instance != null && BuffManager.Instance.activeBuff == BuffType.WoodcutterFury;
                 int damage = isFury ? 999 : 1;
                 nearestTree.TakeDamage(damage);
+            }
+        }
+    }
+
+    public void DeliverLogToBonfire(Bonfire targetBonfire)
+    {
+        if (!isCarryingLog || targetBonfire == null) return;
+        targetBonfire.AddFuel(25f);
+        CameraShake.Instance?.Shake(0.04f, 0.08f);
+        if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
+        isCarryingLog = false;
+        if (thoughtBubble != null) thoughtBubble.SetActive(false);
+        AltarManager.Instance?.OnLogDelivered();
+        GameManager.Instance?.ShowNotification("Log offered to the sacred fire! (+50 pts)");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isCarryingLog)
+        {
+            Bonfire bf = collision.GetComponent<Bonfire>() ?? collision.GetComponentInParent<Bonfire>();
+            if (bf != null)
+            {
+                DeliverLogToBonfire(bf);
             }
         }
     }
