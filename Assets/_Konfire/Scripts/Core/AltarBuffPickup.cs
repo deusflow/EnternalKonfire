@@ -56,6 +56,20 @@ public class AltarBuffPickup : MonoBehaviour
         var sr = go.AddComponent<SpriteRenderer>();
         sr.sortingOrder = 9;
 
+        string spriteName = "";
+        switch (type)
+        {
+            case BuffType.SpeedBoost: spriteName = "Buff_Speed"; break;
+            case BuffType.WoodcutterFury: spriteName = "Buff_Fury"; break;
+            case BuffType.ForestCleanse: spriteName = "Buff_Cleanse"; break;
+            case BuffType.CatRepel: spriteName = "Buff_Repel"; break;
+        }
+
+        #if UNITY_EDITOR
+        var s = UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/_Konfire/Sprites/Items/{spriteName}.png");
+        if (s != null) sr.sprite = s;
+        #endif
+
         var col = go.AddComponent<CircleCollider2D>();
         col.isTrigger = true;
         col.radius = 0.5f;
