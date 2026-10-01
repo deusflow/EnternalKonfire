@@ -1,20 +1,20 @@
-// Tree.cs
-// This script handles tree health, log spawning, and tree registration.
-// Comments are written by a student for other students!
-
 using UnityEngine;
+using System.Collections;
 
 public class Tree : MonoBehaviour
 {
     public int health;
     public GameObject logPrefab;
     public Transform spawnPoint;
-    private Animator animator; // Reference to Animator for tree hit animation
+    private Animator animator;
+    private Coroutine shakeRoutine;
+    private Quaternion originalRot;
 
     void Start()
     {
-        health = Random.Range(2, 6); // Trees have random health between 2 and 5
-        animator = GetComponent<Animator>(); 
+        health = Random.Range(2, 4); // 2-3 hits as per GDD
+        originalRot = transform.rotation;
+        animator = GetComponent<Animator>();
         if (animator != null)
         {
             animator.ResetTrigger("isHit");
@@ -37,10 +37,14 @@ public class Tree : MonoBehaviour
     {
         health -= damage;
         Debug.Log("Tree health: " + health);
+
         if (animator != null)
         {
             animator.SetTrigger("isHit");
         }
+
+        if (shakeRoutine != null) StopCoroutine(shakeRoutine);
+        shakeRoutine = StartCoroutine(ShakeTree());
 
         if (health <= 0)
         {
@@ -52,8 +56,22 @@ public class Tree : MonoBehaviour
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.AddScore(10);
+                int left = ForestManager.Instance != null ? ForestManager.Instance.treeCount - 1 : 0;
+                GameManager.Instance.ShowNotification("Дерево срублено! Полено выпало на землю.");
             }
-            Destroy(gameObject);
+            Destroy(gameObject, 0.1f);
         }
+    }
+
+    private IEnumerator ShakeTree()
+    {
+        transform.rotation = originalRot * Quaternion.Euler(0, 0, -6f);
+        yield return new WaitForSeconds(0.04f);
+        transform.rotation = originalRot * Quaternion.Euler(0, 0, 5f);
+        yield return new WaitForSeconds(0.04f);
+        transform.rotation = originalRot * Quaternion.Euler(0, 0, -2f);
+        yield return new WaitForSeconds(0.04f);
+        transform.rotation = originalRot;
+        shakeRoutine = null;
     }
 }

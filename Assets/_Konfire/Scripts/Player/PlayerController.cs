@@ -1,41 +1,34 @@
-// PlayerController.cs
-// FINAL VERSION (with full sound and buff tuning)
-//
-// This script controls the player character. Comments are written for students by a student :)
-
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections; // Needed for ActivateFuryBuff coroutine
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    // --- Tweakable variables for the Inspector ---
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
 
     [Header("Interaction Settings")]
-    public float interactRadius = 1f;
+    public float interactRadius = 2.5f;
     public LayerMask treeLayer;
     public GameObject thoughtBubble;
     public GameObject altarGlow;
-    public GameObject blueAltarGlow; 
+    public GameObject blueAltarGlow;
 
-    // --- Audio slots for sound effects ---
     [Header("Audio Setup")]
-    public AudioSource footstepSource; // Footstep sound (should be looped)
-    public AudioSource axeChopSource;  // Axe chop sound (short SFX)
+    public AudioSource footstepSource;
+    public AudioSource axeChopSource;
+    public AudioSource pickupSource;
 
-    // --- Internal script variables ---
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private Vector2 lastFacingDirection = Vector2.down;
     private Animator animator;
-    private bool isCarryingLog = false;
-    private bool isFuryActive = false;
+    public bool isCarryingLog = false;
+    public bool isFuryActive = false;
     private PlayerInput playerInput;
     private bool registeredEvents = false;
-    private float lastChopTime = -1f;
+    private float lastChopTime = 0f;
 
-    // --- AWAKE method ---
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -81,96 +74,97 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // --- ONMOVE method (updated) ---
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        if (moveInput.magnitude > 0.1f) 
-        { 
+        if (moveInput.magnitude > 0.1f)
+        {
+            lastFacingDirection = moveInput.normalized;
             if (animator != null && animator.runtimeAnimatorController != null)
             {
-                animator.SetBool("isWalking", true); 
-                animator.SetFloat("moveX", moveInput.x); 
-                animator.SetFloat("moveY", moveInput.y);
+                animator.SetBool("isWalking", true);
+                animator.SetFloat("moveX", lastFacingDirection.x);
+                animator.SetFloat("moveY", lastFacingDirection.y);
             }
-            // Play footstep sound if not already playing
             if (footstepSource != null && footstepSource.clip != null && !footstepSource.isPlaying)
             {
-                footstepSource.Play(); 
+                footstepSource.Play();
             }
         }
-        else 
-        { 
+        else
+        {
             if (animator != null && animator.runtimeAnimatorController != null)
             {
-                animator.SetBool("isWalking", false); 
+                animator.SetBool("isWalking", false);
+                animator.SetFloat("moveX", lastFacingDirection.x);
+                animator.SetFloat("moveY", lastFacingDirection.y);
             }
-            // Stop footstep sound if player stops
             if (footstepSource != null && footstepSource.isPlaying)
             {
-                footstepSource.Stop(); 
+                footstepSource.Stop();
             }
         }
     }
 
-    // --- ONCHOP method (updated) ---
     public void OnChop(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        if (Time.unscaledTime - lastChopTime < 0.1f) return;
+        if (Time.unscaledTime - lastChopTime < 0.15f) return;
         lastChopTime = Time.unscaledTime;
-        // Play axe chop sound every time space is pressed
+
+        // Trigger chop animation and sound in facing direction
         if (axeChopSource != null && axeChopSource.clip != null)
         {
-            // PlayOneShot lets us overlap sounds if player spams the button
             axeChopSource.PlayOneShot(axeChopSource.clip);
         }
         if (animator != null && animator.runtimeAnimatorController != null)
         {
+            animator.SetFloat("moveX", lastFacingDirection.x);
+            animator.SetFloat("moveY", lastFacingDirection.y);
             animator.SetTrigger("isChopping");
         }
 
-        // If carrying a log, try to deliver it to the bonfire
+        // Case 1: If carrying a log, try to deliver to the Bonfire
         if (isCarryingLog)
         {
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
-            Collider2D nearestBonfire = null;
+            Bonfire targetBonfire = null;
             float minDistSq = float.MaxValue;
+
             foreach (var hit in hits)
             {
                 if (hit == null) continue;
-                if (!hit.CompareTag("Bonfire")) continue;
-                float d = (hit.transform.position - transform.position).sqrMagnitude;
-                if (d < minDistSq)
+                var b = hit.GetComponent<Bonfire>() ?? hit.GetComponentInParent<Bonfire>();
+                if (b == null && hit.CompareTag("Bonfire")) b = FindAnyObjectByType<Bonfire>();
+                if (b != null)
                 {
-                    minDistSq = d;
-                    nearestBonfire = hit;
+                    float d = (hit.transform.position - transform.position).sqrMagnitude;
+                    if (d < minDistSq)
+                    {
+                        minDistSq = d;
+                        targetBonfire = b;
+                    }
                 }
             }
-            if (nearestBonfire != null)
+
+            if (targetBonfire != null)
             {
-                var bonfire = nearestBonfire.GetComponent<Bonfire>();
-                if (bonfire != null)
-                {
-                    bonfire.AddFuel(25); // Give 25 fuel instead of 10
-                    if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
-                    isCarryingLog = false;
-                    if (thoughtBubble != null) thoughtBubble.SetActive(false);
-                    Debug.Log("Log delivered to bonfire!");
-                }
-                else
-                {
-                    Debug.LogWarning("Object with Bonfire tag nearby doesn't have Bonfire component.");
-                }
+                targetBonfire.AddFuel(25f);
+                if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
+                isCarryingLog = false;
+                if (thoughtBubble != null) thoughtBubble.SetActive(false);
+                GameManager.Instance?.ShowNotification("Полено доставлено в костёр! (+50 очков)");
+                Debug.Log("Log delivered to bonfire!");
             }
             else
             {
+                GameManager.Instance?.ShowNotification("Рядом нет костра для доставки полена.");
                 Debug.Log("No bonfire nearby to deliver the log.");
             }
             return;
         }
 
-        // If not carrying a log, try to pick up the nearest one
+        // Case 2: If NOT carrying a log, check for nearby Logs on the ground to pick up
         {
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
             Collider2D nearestLog = null;
@@ -186,48 +180,55 @@ public class PlayerController : MonoBehaviour
                     nearestLog = hit;
                 }
             }
+
             if (nearestLog != null)
             {
                 isCarryingLog = true;
                 if (thoughtBubble != null) thoughtBubble.SetActive(true);
+                if (pickupSource != null && pickupSource.clip != null)
+                {
+                    pickupSource.PlayOneShot(pickupSource.clip);
+                }
                 Destroy(nearestLog.gameObject);
+                GameManager.Instance?.ShowNotification("Полено подобрано! Отнеси его к костру.");
                 Debug.Log("Picked up a log!");
                 return;
             }
         }
 
-        // If no log, try to chop the nearest tree
-        Collider2D[] treeHits = Physics2D.OverlapCircleAll(transform.position, interactRadius, treeLayer);
-        if (treeHits != null && treeHits.Length > 0)
+        // Case 3: If no log, chop nearest tree
         {
-            Collider2D nearestTree = null;
+            Collider2D[] treeHits = Physics2D.OverlapCircleAll(transform.position, interactRadius);
+            Tree nearestTree = null;
             float minDistSq = float.MaxValue;
             foreach (var hit in treeHits)
             {
                 if (hit == null) continue;
-                if (hit.GetComponent<Tree>() == null) continue;
-                float d = (hit.transform.position - transform.position).sqrMagnitude;
-                if (d < minDistSq)
+                var t = hit.GetComponent<Tree>() ?? hit.GetComponentInParent<Tree>();
+                if (t != null)
                 {
-                    minDistSq = d;
-                    nearestTree = hit;
+                    float d = (hit.transform.position - transform.position).sqrMagnitude;
+                    if (d < minDistSq)
+                    {
+                        minDistSq = d;
+                        nearestTree = t;
+                    }
                 }
             }
+
             if (nearestTree != null)
             {
                 int damage = isFuryActive ? 999 : 1;
-                nearestTree.GetComponent<Tree>()?.TakeDamage(damage);
+                nearestTree.TakeDamage(damage);
             }
         }
     }
 
-    // --- FIXEDUPDATE method ---
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
     }
 
-    // --- Buff logic ---
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("BuffZone"))
@@ -247,12 +248,11 @@ public class PlayerController : MonoBehaviour
 
     void ActivateForestWardBuff()
     {
-        Debug.Log("FOREST WARD ACTIVATED!");
+        GameManager.Instance?.ShowNotification("СВЯЩЕННЫЙ ОБЕРЕГ АКТИВИРОВАН! 5 деревьев уничтожено!");
         Tree[] allTrees = FindObjectsByType<Tree>(FindObjectsInactive.Exclude);
         int treesToDestroy = 5;
         for (int i = 0; i < allTrees.Length && i < treesToDestroy; i++)
         {
-            // Check allTrees.Length to avoid errors
             if (allTrees[i] != null)
             {
                 Destroy(allTrees[i].gameObject);
@@ -260,14 +260,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // --- Fury buff coroutine ---
-    System.Collections.IEnumerator ActivateFuryBuff()
+    IEnumerator ActivateFuryBuff()
     {
-        Debug.Log("FURY BUFF ACTIVATED!");
+        GameManager.Instance?.ShowNotification("ЯРОСТЬ ДРОВОСЕКА АКТИВИРОВАНА на 10 сек! (Рубка с 1 удара)");
         isFuryActive = true;
-        // Buff lasts for 7 seconds
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(10f);
         isFuryActive = false;
-        Debug.Log("Fury buff ended.");
+        GameManager.Instance?.ShowNotification("Действие Ярости закончилось.");
     }
 }

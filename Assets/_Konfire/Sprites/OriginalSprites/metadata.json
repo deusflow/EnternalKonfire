@@ -1,0 +1,3445 @@
+{
+  "Front - Attacking_7": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      276,
+      245
+    ]
+  },
+  "Front - Walking_19": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      260
+    ]
+  },
+  "Back - Walking_10": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      248
+    ]
+  },
+  "TX Props with Shadow_45": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      14,
+      12
+    ]
+  },
+  "TX Player 1_0": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      21,
+      44
+    ]
+  },
+  "Right - Walking_7": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      167,
+      265
+    ]
+  },
+  "Front - Walking_11": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      261
+    ]
+  },
+  "Front - Idle_10": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      295
+    ]
+  },
+  "TX Props with Shadow_31": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      37,
+      43
+    ]
+  },
+  "Back - Walking_6": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      250
+    ]
+  },
+  "Right - Walking_5": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      166,
+      264
+    ]
+  },
+  "Front - Idle_13": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      298
+    ]
+  },
+  "Gemini_Generated_Image_x71aanx71aanx71a_2": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      408,
+      329
+    ]
+  },
+  "Back - Walking_18": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      248
+    ]
+  },
+  "Left - Walking_3": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      170,
+      265
+    ]
+  },
+  "Left - Walking_4": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      169,
+      263
+    ]
+  },
+  "TX Props with Shadow_3": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      34,
+      54
+    ]
+  },
+  "Assets_source_35": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      46,
+      60
+    ]
+  },
+  "Right - Walking_10": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      174,
+      265
+    ]
+  },
+  "Left - Walking_0": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      175,
+      265
+    ]
+  },
+  "Front - Idle_5": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      296
+    ]
+  },
+  "Left - Walking_13": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      170,
+      262
+    ]
+  },
+  "Right - Walking_4": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      166,
+      264
+    ]
+  },
+  "Left - Walking_12": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      172,
+      261
+    ]
+  },
+  "Right - Walking_3": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      167,
+      265
+    ]
+  },
+  "Gemini_Generated_Image_x71aanx71aanx71a_3": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      409,
+      329
+    ]
+  },
+  "Left - Walking_15": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      167,
+      263
+    ]
+  },
+  "TX Tileset Wall_7": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      34
+    ]
+  },
+  "Front - Idle_11": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      296
+    ]
+  },
+  "TX Struct_7": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      64,
+      64
+    ]
+  },
+  "Back - Walking_15": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      250
+    ]
+  },
+  "ChatGPT Image Oct 26, 2025, 08_20_41 PM_0": {
+    "ppu": 400.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1024,
+      1532
+    ]
+  },
+  "Restart_Click_0": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1494,
+      1024
+    ]
+  },
+  "Back - Walking_1": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      248
+    ]
+  },
+  "Front - Idle_1": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      301
+    ]
+  },
+  "Front - Attacking_2": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      216,
+      298
+    ]
+  },
+  "Right - Walking_9": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      173,
+      266
+    ]
+  },
+  "Gemini_Generated_Image_qyhshtqyhshtqyhs_3": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      96,
+      103
+    ]
+  },
+  "TX Props with Shadow_27": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      37,
+      59
+    ]
+  },
+  "Back - Walking_9": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      248
+    ]
+  },
+  "Right - Walking_1": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      173,
+      263
+    ]
+  },
+  "Right - Walking_13": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      167,
+      267
+    ]
+  },
+  "Left - Walking_11": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      173,
+      261
+    ]
+  },
+  "Front - Walking_10": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  "TX Props with Shadow_1": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      39,
+      33
+    ]
+  },
+  "Left - Walking_18": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      172,
+      265
+    ]
+  },
+  "Assets_source_13": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      95,
+      96
+    ]
+  },
+  "TX Struct_6": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      65,
+      96
+    ]
+  },
+  "Back - Walking_14": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      249
+    ]
+  },
+  "ChatGPT Image Nov 4, 2025, 12_53_22 PM_0": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  "Front - Walking_14": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      263
+    ]
+  },
+  "Right - Walking_11": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      173,
+      266
+    ]
+  },
+  "Left - Walking_14": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      169,
+      262
+    ]
+  },
+  "TX Props with Shadow_24": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      31,
+      34
+    ]
+  },
+  "Front - Walking_0": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      260
+    ]
+  },
+  "Back - Walking_16": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      249
+    ]
+  },
+  "Assets_source_7": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      47,
+      52
+    ]
+  },
+  "Assets_source_18": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      49,
+      67
+    ]
+  },
+  "Right - Walking_8": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      170,
+      265
+    ]
+  },
+  "Right - Walking_2": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      170,
+      264
+    ]
+  },
+  "Front - Walking_18": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      261
+    ]
+  },
+  "Main_0": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1494,
+      1024
+    ]
+  },
+  "Front - Idle_15": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      301
+    ]
+  },
+  "Front - Walking_4": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      263
+    ]
+  },
+  "Front - Idle_4": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      297
+    ]
+  },
+  "Gemini_Generated_Image_x71aanx71aanx71a_4": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      408,
+      331
+    ]
+  },
+  "Front - Attacking_3": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      283
+    ]
+  },
+  "Front - Attacking_4": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      229,
+      275
+    ]
+  },
+  "Assets_source_5": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      67,
+      86
+    ]
+  },
+  "Assets_source_1": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      46,
+      58
+    ]
+  },
+  "TX Tileset Wall_0": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      96,
+      128
+    ]
+  },
+  "TX Props with Shadow_39": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      36,
+      42
+    ]
+  },
+  "TX Props with Shadow_44": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      62,
+      46
+    ]
+  },
+  "Right - Walking_18": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      170,
+      264
+    ]
+  },
+  "Front - Idle_9": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      293
+    ]
+  },
+  "Front - Walking_9": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      261
+    ]
+  },
+  "Gemini_Generated_Image_x71aanx71aanx71a_0": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      408,
+      322
+    ]
+  },
+  "Back - Walking_12": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      249
+    ]
+  },
+  "Front - Idle_0": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      302
+    ]
+  },
+  "Right - Walking_14": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      166,
+      266
+    ]
+  },
+  "Left - Walking_17": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      170,
+      265
+    ]
+  },
+  "Back - Walking_17": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      249
+    ]
+  },
+  "Front - Walking_3": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      261
+    ]
+  },
+  "Back - Walking_3": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      251
+    ]
+  },
+  "Left - Walking_2": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      172,
+      265
+    ]
+  },
+  "Back - Walking_0": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      247
+    ]
+  },
+  "Front - Walking_15": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      263
+    ]
+  },
+  "Right - Walking_12": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      170,
+      267
+    ]
+  },
+  "TX Tileset Grass_152": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_223": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_106": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_193": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_247": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_252": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_240": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_142": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_141": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_214": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_48": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_24": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_184": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_153": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_208": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_211": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_239": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_137": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_255": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_54": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_143": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_185": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_241": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_114": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_113": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_115": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_244": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_207": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_19": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_36": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_173": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_254": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_119": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_53": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_55": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_249": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_92": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_234": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_41": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_170": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_108": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_11": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_32": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_136": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_57": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_84": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_23": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_17": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_206": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_111": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_50": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_128": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_225": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_238": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_187": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_154": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_110": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_126": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_49": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_242": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_52": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_138": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_189": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_229": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_56": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_120": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_43": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_37": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_175": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_51": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_253": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_122": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_150": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_99": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Stone Ground_5": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_6": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_7": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_13": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_14": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_15": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_21": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_22": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_23": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_27": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_33": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_34": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_35": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_37": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_38": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_43": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_44": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Stone Ground_45": {
+    "ppu": 32.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      32,
+      32
+    ]
+  },
+  "TX Tileset Grass_146": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_145": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_112": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_104": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_25": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_22": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_18": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_130": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_42": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_21": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_251": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_67": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_139": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_174": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_195": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_58": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_168": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_103": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_245": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_13": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_186": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_250": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_35": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_200": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_38": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_125": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_26": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_20": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_107": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_98": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_157": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_33": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_188": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_248": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_45": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_81": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_203": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_40": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_34": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_243": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_246": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_59": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_135": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_159": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_109": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_39": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_16": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_158": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_194": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_123": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_155": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_27": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_191": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_129": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_105": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_124": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_190": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_237": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_144": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_176": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_192": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_220": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_121": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_140": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "TX Tileset Grass_127": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "Front - Attacking_6": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      273,
+      268
+    ]
+  },
+  "TX Tileset Grass_0": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      16,
+      16
+    ]
+  },
+  "Restart_Norm_0": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1494,
+      1024
+    ]
+  },
+  "TX Props with Shadow_0": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      41,
+      48
+    ]
+  },
+  "Front - Walking_2": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  "Front - Walking_7": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  "Left - Walking_1": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      173,
+      264
+    ]
+  },
+  "TX Props with Shadow_10": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      41,
+      51
+    ]
+  },
+  "Main_Click_0": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1494,
+      1024
+    ]
+  },
+  "Back - Walking_2": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      249
+    ]
+  },
+  "TX Tileset Wall_3": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      8,
+      96
+    ]
+  },
+  "Left - Walking_19": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      173,
+      265
+    ]
+  },
+  "Front - Idle_2": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      300
+    ]
+  },
+  "Front - Attacking_0": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      276
+    ]
+  },
+  "Left - Walking_6": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      169,
+      263
+    ]
+  },
+  "Front - Idle_7": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      293
+    ]
+  },
+  "Front - Idle_14": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      300
+    ]
+  },
+  "Front - Walking_16": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  "ChatGPT Image Oct 29, 2025, 09_14_26 PM_0": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1212,
+      381
+    ]
+  },
+  "Gemini_Generated_Image_3rb9ie3rb9ie3rb9_0": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1013,
+      643
+    ]
+  },
+  "Front - Attacking_5": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      257,
+      276
+    ]
+  },
+  "Right - Walking_6": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      166,
+      264
+    ]
+  },
+  "Assets_source_10": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      30,
+      29
+    ]
+  },
+  "Left - Walking_7": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      170,
+      262
+    ]
+  },
+  "Left - Walking_5": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      167,
+      263
+    ]
+  },
+  "Back - Walking_7": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      250
+    ]
+  },
+  "Front - Idle_6": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      295
+    ]
+  },
+  "ChatGPT Image Oct 29, 2025, 09_14_26 PM_3": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      1211,
+      305
+    ]
+  },
+  "TX Props with Shadow_37": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      99,
+      82
+    ]
+  },
+  "Front - Walking_1": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      261
+    ]
+  },
+  "Front - Attacking_8": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      276,
+      242
+    ]
+  },
+  "Gemini_Generated_Image_x71aanx71aanx71a_1": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      411,
+      304
+    ]
+  },
+  "Front - Walking_17": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  "Left - Walking_9": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      173,
+      261
+    ]
+  },
+  "Right - Walking_0": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      174,
+      263
+    ]
+  },
+  "Front - Walking_13": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  "TX Props with Shadow_53": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      33,
+      21
+    ]
+  },
+  "Right - Walking_15": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      166,
+      266
+    ]
+  },
+  "Front - Walking_8": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  "TX Props with Shadow_5": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      7,
+      21
+    ]
+  },
+  "Gemini_Generated_Image_x71aanx71aanx71a_5": {
+    "ppu": 100.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      411,
+      339
+    ]
+  },
+  "Left - Walking_8": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      172,
+      261
+    ]
+  },
+  "TX Props with Shadow_30": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      25,
+      36
+    ]
+  },
+  "Front - Attacking_1": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      296
+    ]
+  },
+  "Front - Walking_12": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  },
+  "Left - Walking_16": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      169,
+      264
+    ]
+  },
+  "Front - Idle_12": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      297
+    ]
+  },
+  "Front - Attacking_9": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      276,
+      242
+    ]
+  },
+  "TX Tileset Wall_4": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      96,
+      8
+    ]
+  },
+  "Left - Walking_10": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      175,
+      260
+    ]
+  },
+  "TX Tileset Wall_2": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      10,
+      96
+    ]
+  },
+  "Assets_source_4": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      100,
+      86
+    ]
+  },
+  "Right - Walking_17": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      167,
+      265
+    ]
+  },
+  "Front - Idle_3": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      298
+    ]
+  },
+  "Right - Walking_16": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      166,
+      264
+    ]
+  },
+  "Right - Walking_19": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      173,
+      264
+    ]
+  },
+  "Back - Walking_5": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      251
+    ]
+  },
+  "Front - Idle_8": {
+    "ppu": 128.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      249,
+      292
+    ]
+  },
+  "Assets_source_24": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      27,
+      36
+    ]
+  },
+  "Back - Walking_4": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      250
+    ]
+  },
+  "Back - Walking_19": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      248
+    ]
+  },
+  "TX Props with Shadow_8": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      48,
+      75
+    ]
+  },
+  "TX Props with Shadow_43": {
+    "ppu": 16.0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      60,
+      51
+    ]
+  },
+  "Back - Walking_13": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      250
+    ]
+  },
+  "Back - Walking_8": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      249
+    ]
+  },
+  "Front - Walking_6": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      263
+    ]
+  },
+  "Back - Walking_11": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      214,
+      248
+    ]
+  },
+  "Front - Walking_5": {
+    "ppu": 109.19999694824219,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "size": [
+      215,
+      262
+    ]
+  }
+}

@@ -1,91 +1,88 @@
-/*
- * Bonfire.cs
- * UPDATED: Buff logic is now random (RNG).
- *
- * This script manages the bonfire's fuel, buffs, and related sounds.
- * Comments are written by a student for other students!
- */
-
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class Bonfire : MonoBehaviour
 {
     public float maxFuel = 100f;
-    public float currentFuel; 
-    public float burnRate = 2f; 
+    public float currentFuel = 100f;
+    public float burnRate = 2f;
 
     public Slider fuelSlider;
     public GameObject altarGlow;
-    public GameObject blueAltarGlow; 
-    
-    [Header("Buff Settings")]
-    [Tooltip("Chance (0.0 to 1.0) for a buff to appear when you deliver a log")]
-    [Range(0, 1)]
-    public float buffChance = 0.25f; // 25% chance by default
+    public GameObject blueAltarGlow;
+
+    [Header("Buff Tracking (GDD)")]
+    public int mediumFuelDeliveries = 0;
+    public int highFuelDeliveries = 0;
 
     [Header("Audio Setup")]
-    public AudioSource logBurnSource; 
-    
+    public AudioSource logBurnSource;
+
     void Start()
     {
         if (currentFuel <= 0) currentFuel = maxFuel;
         if (fuelSlider != null) fuelSlider.maxValue = maxFuel;
         if (altarGlow != null) altarGlow.SetActive(false);
-        if (blueAltarGlow != null) blueAltarGlow.SetActive(false); 
-        UpdateFuelSlider(); 
+        if (blueAltarGlow != null) blueAltarGlow.SetActive(false);
+        UpdateFuelSlider();
     }
 
     void Update()
     {
-        if (currentFuel > 0.001f) 
+        if (currentFuel > 0.001f)
         {
             currentFuel -= burnRate * Time.deltaTime;
             UpdateFuelSlider();
         }
-        else 
+        else
         {
             currentFuel = 0f;
             UpdateFuelSlider();
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.EndGame("The bonfire went out"); 
+                GameManager.Instance.EndGame("The bonfire went out");
             }
             this.enabled = false;
         }
     }
 
-    // --- ADDFUEL method (major update) ---
     public void AddFuel(float amount)
     {
-        // 1. Play log burn sound
         if (logBurnSource != null)
         {
             logBurnSource.Play();
         }
-        // 2. Add fuel
+
         currentFuel += amount;
         if (currentFuel > maxFuel) currentFuel = maxFuel;
         UpdateFuelSlider();
-        // 3. Check if altar is clear (no active buff)
-        bool altarIsClear = (altarGlow != null && !altarGlow.activeSelf) && 
-                            (blueAltarGlow != null && !blueAltarGlow.activeSelf);
-        if (altarIsClear)
+
+        // GDD Buff Trigger Logic
+        // Rosk Bøf (Fury): Deliver 2 logs while fuel is medium (40 - 80)
+        if (currentFuel >= 40f && currentFuel <= 80f)
         {
-            // 4. Roll the dice for a random buff
-            if (Random.value <= buffChance) 
+            mediumFuelDeliveries++;
+            if (mediumFuelDeliveries >= 2)
             {
-                Debug.Log("LUCKY! The altar is charging with a random buff...");
-                // 5. 50/50 chance for which buff you get
-                if (Random.value <= 0.5f)
+                mediumFuelDeliveries = 0;
+                if (altarGlow != null)
                 {
-                    // Pink buff (Fury)
                     altarGlow.SetActive(true);
+                    GameManager.Instance?.ShowNotification("АЛТАРЬ ЗАРЯЖЕН! Розовая аура: Ярость лесоруба готова!");
                 }
-                else
+            }
+        }
+        // Blå Bøf (Forest Ward): Deliver 3 logs while fuel is roaring (80+)
+        else if (currentFuel > 80f)
+        {
+            highFuelDeliveries++;
+            if (highFuelDeliveries >= 3)
+            {
+                highFuelDeliveries = 0;
+                if (blueAltarGlow != null)
                 {
-                    // Blue buff (Ward)
                     blueAltarGlow.SetActive(true);
+                    GameManager.Instance?.ShowNotification("АЛТАРЬ ЗАРЯЖЕН! Синяя аура: Священный оберег леса готов!");
                 }
             }
         }
@@ -103,8 +100,9 @@ public class Bonfire : MonoBehaviour
     {
         if (collision.CompareTag("Log"))
         {
-            AddFuel(10f); 
-            Destroy(collision.gameObject); 
+            AddFuel(25f);
+            if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
+            Destroy(collision.gameObject);
         }
     }
 }

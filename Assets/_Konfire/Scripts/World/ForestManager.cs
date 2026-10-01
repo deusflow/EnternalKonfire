@@ -1,10 +1,3 @@
-// ForestManager.cs
-//
-// Handles all the tree spawning and the spooky cat event. I tried to make the forest get harder over time.
-// If you see any weird bugs, sorry! Let me know :)
-//
-// (Wrote these comments for my classmates and teachers. If something's confusing, just ask!)
-
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -14,25 +7,25 @@ public class ForestManager : MonoBehaviour
 
     [Header("Cat Spawning")]
     public int treeCount = 0;
-    public int minTreesBeforeCat = 40; // Cat won't show up before this many trees
-    public int maxTreesBeforeCat = 60; // ...or after this many
-    private int actualCatLimit; // The real number is random each game
+    public int minTreesBeforeCat = 14;
+    public int maxTreesBeforeCat = 20;
+    public int actualCatLimit;
     public GameObject catPrefab;
     public Transform playerTransform;
-    private bool isCatSpawned = false; // Only one cat per game!
+    private bool isCatSpawned = false;
 
     [Header("Audio Setup")]
-    public AudioSource catSpawnSource; // Plays a sound when the cat spawns (it's kinda scary)
+    public AudioSource catSpawnSource;
 
     [Header("Forest Growth")]
-    public List<GameObject> treePrefabs; // You can add more tree types here
-    public float initialSpawnDelay = 10f; // How slow trees spawn at the start
-    public float minSpawnDelay = 2f;      // Fastest possible spawn
-    public float difficultyIncreaseInterval = 30f; // How often it gets harder
-    public float delayReduction = 0.5f;   // How much faster each time
+    public List<GameObject> treePrefabs;
+    public float initialSpawnDelay = 10f;
+    public float minSpawnDelay = 2f;
+    public float difficultyIncreaseInterval = 25f;
+    public float delayReduction = 0.5f;
 
     [Header("Spawn Boundaries")]
-    public float spawnPadding = 1.0f; // Trees won't spawn too close to the edge
+    public float spawnPadding = 1.0f;
     private Camera mainCamera;
     private float camHeight;
     private float camWidth;
@@ -44,9 +37,7 @@ public class ForestManager : MonoBehaviour
     void Awake()
     {
         if (Instance == null) Instance = this;
-        // Pick a random number of trees before the cat shows up (makes it less predictable)
         actualCatLimit = Random.Range(minTreesBeforeCat, maxTreesBeforeCat + 1);
-        Debug.Log("Heads up: The cat will appear after " + actualCatLimit + " trees!");
         currentSpawnDelay = initialSpawnDelay;
         spawnTimer = currentSpawnDelay;
         difficultyTimer = difficultyIncreaseInterval;
@@ -54,10 +45,8 @@ public class ForestManager : MonoBehaviour
         mainCamera = Camera.main;
         if (mainCamera == null)
         {
-            // If you see this error, something's wrong with the camera setup
-            Debug.LogError("ForestManager: No main camera found. Tree spawning might be broken.");
-            camHeight = 5f; 
-            camWidth = 9f;
+            camHeight = 10f;
+            camWidth = 18f;
         }
         else
         {
@@ -68,60 +57,58 @@ public class ForestManager : MonoBehaviour
 
     void Update()
     {
-        // This timer controls when to spawn the next tree
         spawnTimer -= Time.deltaTime;
         if (spawnTimer <= 0)
         {
             SpawnTree();
-            spawnTimer = currentSpawnDelay; 
+            spawnTimer = currentSpawnDelay;
         }
 
-        // This timer makes the game harder every so often
         difficultyTimer -= Time.deltaTime;
         if (difficultyTimer <= 0)
         {
             IncreaseDifficulty();
-            difficultyTimer = difficultyIncreaseInterval; 
+            difficultyTimer = difficultyIncreaseInterval;
         }
     }
 
     void SpawnTree()
     {
-        // If you forgot to add tree prefabs, nothing will spawn!
-        if (treePrefabs == null || treePrefabs.Count == 0)
-        {
-            Debug.LogError("ForestManager: No tree prefabs set in the inspector.");
-            return;
-        }
+        if (treePrefabs == null || treePrefabs.Count == 0) return;
         GameObject prefabToSpawn = treePrefabs[Random.Range(0, treePrefabs.Count)];
 
-        // Try up to 10 times to find a good spawn spot
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 15; i++)
         {
-            float spawnX = Random.Range(-camWidth + spawnPadding, camWidth - spawnPadding);
-            float spawnY = Random.Range(-camHeight + spawnPadding, camHeight - spawnPadding);
+            float spawnX = Random.Range(-18f + spawnPadding, 18f - spawnPadding);
+            float spawnY = Random.Range(-9f + spawnPadding, 9f - spawnPadding);
             Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 
-            Collider2D treeHit = Physics2D.OverlapCircle(spawnPosition, 1.5f, LayerMask.GetMask("Trees"));
-            Collider2D noSpawnHit = Physics2D.OverlapCircle(spawnPosition, 0.1f, LayerMask.GetMask("Default"));
+            // Check if too close to center altar platform (X: -6..6, Y: 0..9)
+            if (spawnX >= -6f && spawnX <= 6f && spawnY >= -1f && spawnY <= 9.5f)
+            {
+                continue; // Do not spawn on Altar or stairs!
+            }
+
+            Collider2D treeHit = Physics2D.OverlapCircle(spawnPosition, 1.8f, LayerMask.GetMask("Trees"));
+            Collider2D noSpawnHit = Physics2D.OverlapCircle(spawnPosition, 0.5f);
             bool isNoSpawnZone = (noSpawnHit != null && noSpawnHit.CompareTag("NoSpawn"));
 
             if (treeHit == null && !isNoSpawnZone)
             {
                 GameObject newTree = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
-                float randomScale = Random.Range(0.8f, 1.3f); // Trees can be different sizes
+                float randomScale = Random.Range(0.85f, 1.25f);
                 newTree.transform.localScale = new Vector3(randomScale, randomScale, 1f);
-                return; 
+                return;
             }
         }
     }
 
     void IncreaseDifficulty()
     {
-        // Makes trees spawn faster, but not too fast
         if (currentSpawnDelay > minSpawnDelay)
         {
             currentSpawnDelay -= delayReduction;
+            GameManager.Instance?.ShowNotification("ЛЕС СТАНОВИТСЯ ЗЛЕЕ! Новая задержка спавна: " + currentSpawnDelay.ToString("F1"));
             Debug.Log("Forest is getting harder! New spawn delay: " + currentSpawnDelay);
         }
     }
@@ -129,6 +116,7 @@ public class ForestManager : MonoBehaviour
     public void RegisterTree()
     {
         treeCount++;
+        GameManager.Instance?.ShowNotification("Дерево зарегистрировано! Всего деревьев: " + treeCount + " / " + actualCatLimit);
         Debug.Log("Tree added! Total: " + treeCount + " / " + actualCatLimit);
         CheckForCatSpawn();
     }
@@ -141,7 +129,6 @@ public class ForestManager : MonoBehaviour
 
     void CheckForCatSpawn()
     {
-        // If enough trees have spawned and the cat isn't here yet, spawn it!
         if (treeCount >= actualCatLimit && !isCatSpawned)
         {
             SpawnCat();
@@ -151,19 +138,15 @@ public class ForestManager : MonoBehaviour
     void SpawnCat()
     {
         if (isCatSpawned) return;
-        if (catPrefab == null || playerTransform == null)
-        {
-            Debug.LogError("ForestManager: Can't spawn cat — missing catPrefab or playerTransform. Check inspector!");
-            return;
-        }
-        isCatSpawned = true; 
+        if (catPrefab == null) return;
+        isCatSpawned = true;
+        GameManager.Instance?.ShowNotification("ДУХ ЛЕСА ПРОБУДИЛСЯ! СПАСАЙСЯ!");
         Debug.Log("The cat has spawned! Good luck :)");
-        // Play a sound when the cat appears (jump scare?)
         if (catSpawnSource != null)
         {
             catSpawnSource.Play();
         }
-        // Cat spawns a bit away from the player (so you have a chance!)
-        Instantiate(catPrefab, playerTransform.position + new Vector3(10, 8, 0), Quaternion.identity);
+        Vector3 spawnPos = playerTransform != null ? playerTransform.position + new Vector3(8, 6, 0) : new Vector3(9f, 7.5f, 0);
+        Instantiate(catPrefab, spawnPos, Quaternion.identity);
     }
 }

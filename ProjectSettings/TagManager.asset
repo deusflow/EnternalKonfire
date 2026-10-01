@@ -8,6 +8,7 @@ TagManager:
   - Bonfire
   - BuffZone
   - NoSpawn
+  - Tree
   layers:
   - Default
   - TransparentFX
