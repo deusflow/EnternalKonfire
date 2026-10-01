@@ -196,6 +196,7 @@ public class PlayerController : MonoBehaviour
             if (targetBonfire != null)
             {
                 targetBonfire.AddFuel(25f);
+                CameraShake.Instance?.Shake(0.15f, 0.12f);
                 if (GameManager.Instance != null) GameManager.Instance.AddScore(50);
                 isCarryingLog = false;
                 if (thoughtBubble != null) thoughtBubble.SetActive(false);

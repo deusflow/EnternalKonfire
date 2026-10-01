@@ -46,12 +46,15 @@ public class Tree : MonoBehaviour
         if (shakeRoutine != null) StopCoroutine(shakeRoutine);
         shakeRoutine = StartCoroutine(ShakeTree());
 
+        Vector3 fxPos = spawnPoint != null ? spawnPoint.position : transform.position;
+
         if (health <= 0)
         {
-            Vector3 spawnPos = spawnPoint != null ? spawnPoint.position : transform.position;
+            HitFXManager.Instance?.TriggerTreeFelled(fxPos);
+
             if (logPrefab != null)
             {
-                Instantiate(logPrefab, spawnPos, Quaternion.identity);
+                Instantiate(logPrefab, fxPos, Quaternion.identity);
             }
             if (GameManager.Instance != null)
             {
@@ -59,7 +62,11 @@ public class Tree : MonoBehaviour
                 int left = ForestManager.Instance != null ? ForestManager.Instance.treeCount - 1 : 0;
                 GameManager.Instance.ShowNotification("Tree chopped! Log dropped on ground.");
             }
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, 0.08f);
+        }
+        else
+        {
+            HitFXManager.Instance?.TriggerChopHit(fxPos);
         }
     }
 

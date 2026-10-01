@@ -1,17 +1,17 @@
 // GhostCatAI.cs
-// This script controls the spooky ghost cat's AI.
-// Comments are written by a student for other students!
+// Spooky ghost cat AI with menacing URP 2D aura
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Rendering.Universal;
 
 public class GhostCatAI : MonoBehaviour
 {
-    public float moveSpeed = 1f;
+    public float moveSpeed = 1.2f;
     private Transform playerTransform;
     private bool canKill = false;
-
-    private Rigidbody2D rb; // Reference to Rigidbody2D for movement
+    private Rigidbody2D rb;
+    private SpriteRenderer sr;
 
     void Start()
     {
@@ -27,16 +27,21 @@ public class GhostCatAI : MonoBehaviour
             return;
         }
 
-        rb = GetComponentInParent<Rigidbody2D>();
-        if (rb == null)
+        rb = GetComponentInParent<Rigidbody2D>() ?? GetComponent<Rigidbody2D>();
+        sr = GetComponentInChildren<SpriteRenderer>();
+
+        // Add spooky menacing purple light
+        var catLight = GetComponentInChildren<Light2D>();
+        if (catLight == null)
         {
-            rb = GetComponent<Rigidbody2D>();
-        }
-        if (rb == null)
-        {
-            Debug.LogError("GhostCatAI: No Rigidbody2D found on object or parent. Disabling AI.");
-            enabled = false;
-            return;
+            GameObject lightGO = new GameObject("GhostCat_Glow");
+            lightGO.transform.SetParent(transform, false);
+            catLight = lightGO.AddComponent<Light2D>();
+            catLight.lightType = Light2D.LightType.Point;
+            catLight.color = new Color(0.85f, 0.2f, 1f, 1f); // Menacing spectral violet
+            catLight.intensity = 1.2f;
+            catLight.pointLightInnerRadius = 0.8f;
+            catLight.pointLightOuterRadius = 4.0f;
         }
 
         StartCoroutine(GracePeriod());
@@ -44,33 +49,32 @@ public class GhostCatAI : MonoBehaviour
 
     IEnumerator GracePeriod()
     {
-        yield return new WaitForSeconds(2f); // Wait 2 seconds before cat can kill
+        yield return new WaitForSeconds(2f);
         canKill = true; 
         Debug.Log("The cat started hunting!");
     }
 
-    // We moved the movement logic from Update to FixedUpdate
-    // This is the right place for physics-based movement
     void FixedUpdate()
     {
         if (!enabled) return;
-        if (playerTransform != null && canKill)
+        if (playerTransform != null && canKill && rb != null)
         {
-            // Find direction to player
             Vector2 direction = (playerTransform.position - transform.position).normalized;
-            // Move the cat using physics
+            if (sr != null && Mathf.Abs(direction.x) > 0.05f)
+            {
+                sr.flipX = direction.x < 0;
+            }
             rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
         }
     }
 
-    // This code stays unchanged, it works fine
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (canKill && other.CompareTag("Player"))
         {
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.EndGame("The cat caught you");
+                GameManager.Instance.EndGame("The Ghost Cat caught you");
             }
             else
             {
