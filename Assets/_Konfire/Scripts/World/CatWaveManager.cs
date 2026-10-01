@@ -75,7 +75,11 @@ public class CatWaveManager : MonoBehaviour
 
         var col = cat.AddComponent<CircleCollider2D>();
         col.isTrigger = true;
-        col.radius = 0.5f;
+        col.radius = 0.85f;
+
+        var solidCol = cat.AddComponent<CircleCollider2D>();
+        solidCol.isTrigger = false;
+        solidCol.radius = 0.45f;
 
         var sr = cat.AddComponent<SpriteRenderer>();
         sr.sortingOrder = 7;
